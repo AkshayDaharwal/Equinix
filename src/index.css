@@ -54,3 +54,25 @@ body {
     @apply bg-gradient-to-r from-[#FF0404] via-[#FF7878] to-[#CF0000] bg-clip-text text-transparent;
   }
 }
+
+@keyframes floating {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(8px, -8px);
+  }
+  50% {
+    transform: translate(0px, -12px);
+  }
+  75% {
+    transform: translate(-8px, -6px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.animate-floating {
+  animation: floating 5s ease-in-out infinite;
+}

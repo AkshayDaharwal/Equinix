@@ -1,5 +1,6 @@
 import React from "react"
-import { UserRound, Gift } from "lucide-react"
+import { UserRound, Gift } from "lucide-react";
+import { motion } from "framer-motion" ;
 
 const cards = [
   {
@@ -18,19 +19,39 @@ const cards = [
 
 const FeatureCard = ({ title }) => {
   return (
-    <div className="w-[180px] h-[190px] rounded-2xl bg-gradient-to-b from-[#000000] to-[#310000]  flex flex-col items-center justify-center text-center ">
+    <motion.div
+    whileHover={{
+      y: -10,
+      scale: 1.04,
+    }}
+    transition={{
+      type: "spring",
+      stiffness: 200,
+      damping: 12,
+    }}
+    className="relative z-10 group cursor-pointer w-[180px] h-[190px] rounded-2xl bg-gradient-to-b from-[#000000] to-[#310000] flex flex-col items-center justify-center text-center "
+  >
+    
+    {/* Gradient Glow */}
+    <div className="absolute -inset-6 -z-10 opacity-0 group-hover:opacity-40 transition-all duration-500 bg-gradient-to-br from-red-700/40 via-red-500/30 to-red-900/20 blur-3xl" />
+
+    {/* CONTENT */}
+    <div className="relative z-10 flex flex-col items-center justify-center">
+      
       <div className="relative mb-8">
         <Gift className="w-10 h-10 text-white" strokeWidth={1.8} />
+
         <UserRound
           className="w-5 h-5 text-white absolute -bottom-1 -right-3"
           strokeWidth={1.8}
         />
       </div>
 
-      <p className="text-white text-[14px] mt-2 leading-6 font-2xl whitespace-pre-line font-montserrat px-3">
+      <p className="text-white text-[14px] mt-2 leading-6 whitespace-pre-line font-montserrat px-3">
         {title}
       </p>
     </div>
+  </motion.div>
   )
 }
 

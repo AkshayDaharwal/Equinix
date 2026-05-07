@@ -1,5 +1,5 @@
 import React from "react";
-import box from "../assets/homepage/robots/box.png";
+import box from "../assets/homepage/robots/box1.png";
 
 const EquinixBlockchainPage = () => {
   return (
@@ -34,11 +34,16 @@ const EquinixBlockchainPage = () => {
 
           {/* Center Image */}
           <div className="relative flex items-center justify-center">
-            {/* Put your image inside: public/assets/center-box.png */}
+            {/* RED GLOW BACKGROUND */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="w-[260px] h-[260px] md:w-[380px] md:h-[380px] rounded-full bg-red-600/20 blur-[100px]"></div>
+            </div>
+
+            {/* IMAGE */}
             <img
               src={box}
               alt="Center Structure"
-              className="w-[350px] md:w-[450px] object-contain"
+              className="relative hover:cursor-pointer z-10 w-[350px] md:w-[450px] object-contain animate-floating drop-shadow-[0_0_40px_rgba(200,0,0,0.35)]"
             />
 
             {/* LEFT TOP CARD */}
@@ -47,8 +52,8 @@ const EquinixBlockchainPage = () => {
                 High-performance blockchain node deployment
               </div>
 
-              <div className="relative w-24 h-[1px]  bg-gray-500">
-                <div className="absolute  left-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border border-gray-400 bg-black flex items-center justify-center">
+              <div className="relative w-24 h-[1px] bg-gray-500">
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border border-gray-400 bg-black flex items-center justify-center">
                   <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
                 </div>
               </div>
@@ -95,11 +100,11 @@ const EquinixBlockchainPage = () => {
           </div>
 
           {/* Bottom Left Description */}
-         <div className="absolute mb-[-40px] font-montserrat bottom-0 left-[-50px] w-[700px] text-[15px] leading-8 text-gray-400">
-  Unlike typical crypto platforms, we focus on real infrastructure utility,
-  ensuring that every transaction, node, and network interaction runs
-  smoothly and securely.
-</div>
+          <div className="absolute mb-[-40px] font-montserrat bottom-0 left-[-50px] w-[700px] text-[15px] leading-8 text-gray-400">
+            Unlike typical crypto platforms, we focus on real infrastructure
+            utility, ensuring that every transaction, node, and network
+            interaction runs smoothly and securely.
+          </div>
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import robot from "../assets/homepage/robots/robot3.png";
-
+import { motion } from "framer-motion";
 
 const roadmapItems = [
   "Scaling to 100 million users by 2027",
   "Launching a high-utility token ecosystem in 2028",
   "Expanding AI-driven financial automation",
   "Creating a fully interconnected global Web3 network",
-]
+];
 
 const FutureVision = () => {
   return (
@@ -18,12 +18,23 @@ const FutureVision = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-10 py-16">
         <div className="grid grid-cols-2 gap-20 items-center min-h-[90vh]">
           {/* LEFT IMAGE SECTION */}
-          <div className="relative flex justify-center">
-            {/* Put your image in public/assets/robot-vision.png */}
-            <img
+          <div className="relative flex justify-center group cursor-pointer">
+            {/* Gradient Glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-red-900/0 via-red-600/30 to-red-900/0 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-[40px]" />
+
+            <motion.img
               src={robot}
               alt="Robot Vision"
-              className="w-[520px] h-[640px] object-cover mt-8 mr-16 rounded-[28px]"
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 180,
+                damping: 12,
+              }}
+              className="relative z-10 w-[520px] h-[640px] object-cover mt-8 mr-16 rounded-[28px]"
             />
           </div>
 
@@ -71,7 +82,7 @@ const FutureVision = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FutureVision
+export default FutureVision;

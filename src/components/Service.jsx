@@ -2,8 +2,7 @@ import React from "react";
 import hand from "../assets/homepage/robots/hand.png";
 import { Banknote, Cloud, Dna, Tv, Settings } from "lucide-react";
 import { FaUniversity } from "react-icons/fa";
-
-
+import { motion } from "framer-motion";
 
 const IndustriesSection = () => {
   return (
@@ -17,10 +16,12 @@ const IndustriesSection = () => {
 
         {/* Item */}
         <div className="flex items-start gap-3 py-4 border-b border-gray-500">
-        <FaUniversity className="text-red-600 w-5 h-5 mt-1" />
-         
+          <FaUniversity className="text-red-600 w-5 h-5 mt-1" />
+
           <div>
-            <h4 className="text-2xl font-montserrat ">Financial Services & Banking</h4>
+            <h4 className="text-2xl font-montserrat ">
+              Financial Services & Banking
+            </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2 ">
               Secure, low-latency systems for payments, trading, and global
               finance.
@@ -30,9 +31,11 @@ const IndustriesSection = () => {
 
         {/* Active Item */}
         <div className="flex items-start gap-3 py-4 bg-gray-200 text-black rounded-lg my-3 px-4">
-         <Cloud className="text-red-600 w-5 h-5 mt-1" />
+          <Cloud className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">Cloud & IT Infrastructure</h4>
+            <h4 className="text-2xl font-montserrat">
+              Cloud & IT Infrastructure
+            </h4>
             <p className="text-sm font-montserrat mt-2">
               Reliable infrastructure for Web3, nodes, exchanges, and DeFi
               platforms.
@@ -44,7 +47,9 @@ const IndustriesSection = () => {
         <div className="flex items-start gap-3 py-4 border-b border-gray-500">
           <Dna className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">Healthcare & Life Sciences</h4>
+            <h4 className="text-2xl font-montserrat">
+              Healthcare & Life Sciences
+            </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2">
               Fast, secure data handling for healthcare and research platforms.
             </p>
@@ -63,9 +68,11 @@ const IndustriesSection = () => {
         </div>
 
         <div className="flex items-start gap-3 py-4 border-b border-gray-500">
-        <Settings className="text-red-600 w-5 h-5 mt-1" />
+          <Settings className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">Manufacturing & Engineering</h4>
+            <h4 className="text-2xl font-montserrat">
+              Manufacturing & Engineering
+            </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2">
               Smart infrastructure for IoT, automation, and real-time
               operations.
@@ -74,25 +81,88 @@ const IndustriesSection = () => {
         </div>
       </div>
 
-
       {/* RIGHT SIDE */}
-<div className="w-[45%]">
+      <div className="w-[45%]">
+        <p className="font-mokoto text-gradient-red text-3xl mb-2 tracking-widest">
+          SERVICES
+        </p>
 
-  <p className="font-mokoto text-gradient-red text-3xl mb-2 tracking-widest">
-    SERVICES
-  </p>
+        <h2 className="text-4xl font-montserrat mb-8 leading-tight">
+          INDUSTRIES WE <br /> SERVE
+        </h2>
 
-  <h2 className="text-4xl font-montserrat mb-8 leading-tight">
-    INDUSTRIES WE <br /> SERVE
-  </h2>
+        <div className="relative flex justify-center items-center overflow-hidden">
+          {/* RED GLOW */}
+          <motion.div
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute w-[420px] h-[420px]
+    bg-red-600/20 rounded-full blur-[100px]"
+          />
 
-  <div className="grid grid-cols-2 gap-4">
-    <img
-      src={hand}
-      className="w-[500px] h-[500px] rounded-xl max-w-none"
-    />
-  </div>
-</div>
+          {/* ROTATING BORDER */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute w-[530px] h-[530px]
+    rounded-[30px]
+    border border-red-500/30
+    border-dashed"
+          />
+
+          {/* SCANNING LINE */}
+          <motion.div
+            animate={{
+              y: [-220, 220, -220],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute z-20
+    w-[480px] h-[4px]
+    bg-gradient-to-r
+    from-transparent
+    via-red-500
+    to-transparent
+    blur-sm"
+          />
+
+          {/* IMAGE */}
+          <motion.img
+            src={hand}
+            alt="AI Hand"
+            className="relative z-10
+    w-[500px] h-[500px]
+    rounded-xl
+    object-cover
+    border border-red-500/20
+    shadow-[0_0_50px_rgba(255,0,0,0.25)]"
+            animate={{
+              y: [0, -15, 0],
+              rotate: [0, 1, -1, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+      </div>
     </section>
   );
 };
