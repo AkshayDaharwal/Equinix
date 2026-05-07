@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: black;
+}
+
+.btn-cut {
+  position: relative;
+  padding: 6px 22px;
+  font-size: 14px;
+  color: white;
+  background: black;
+  cursor: pointer;
+
+  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+}
+
+/* GRADIENT BORDER */
+.btn-cut::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.btn-cut:hover {
+  background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+}
+
+@font-face {
+  font-family: "Mokoto";
+  src: url("./src/assets/font/Mokoto.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-gradient-red {
+    @apply bg-gradient-to-r from-[#FF0404] via-[#FF7878] to-[#CF0000] bg-clip-text text-transparent;
+  }
+}
