@@ -6,9 +6,31 @@ import { motion } from "framer-motion";
 
 const IndustriesSection = () => {
   return (
-    <section className="bg-black text-white px-10 py-16 flex justify-between items-start">
+    <section
+  className="
+    bg-black text-white
+    px-10 py-16
+    flex justify-between items-start
+
+    max-[996px]:flex-col
+    max-[996px]:items-center
+    max-[996px]:gap-20
+
+    max-[768px]:px-6
+  "
+>
       {/* LEFT SIDE */}
-      <div className="w-[45%] space-y-8 translate-x-10">
+      {/* LEFT SIDE */}
+<div
+  className="
+    w-[45%] space-y-8 translate-x-10
+
+    max-[1200px]:translate-x-0
+
+    max-[996px]:order-2
+    max-[996px]:w-full
+  "
+>
         <p className="text-gray-400 font-montserrat text-sm mb-6 leading-6">
           Our infrastructure, powered by Equinix, supports diverse industries
           with secure, scalable, and high-performance connectivity.
@@ -84,7 +106,19 @@ const IndustriesSection = () => {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="w-[45%]">
+     {/* RIGHT SIDE */}
+<div
+  className="
+    w-[45%]
+
+    max-[996px]:order-1
+    max-[996px]:w-full
+    max-[996px]:flex
+    max-[996px]:flex-col
+    max-[996px]:items-center
+    max-[996px]:text-center
+  "
+>
         <p className="font-mokoto text-gradient-red text-3xl mb-2 tracking-widest">
           SERVICES
         </p>
