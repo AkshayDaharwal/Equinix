@@ -1,94 +1,343 @@
+import React from "react";
 import robot from "../assets/homepage/robots/robot1.png";
 
+const features = [
+  "Ecosystem Participation",
+  "Referral-Based Growth",
+  "DeFi Staking & Utilities",
+  "Node & Infrastructure Support",
+];
+
+const floatingTags = [
+  {
+    text: "Global Community Builders",
+    className: `
+      top-[-16%] left-[-28%] lg:left-[-95%] rotate-[-25deg]
+      max-[1024px]:left-[-92%] max-[1024px]:top-[-18%]
+    `,
+  },
+  {
+    text: "Web3 Marketers",
+    className: `
+      top-[2%] left-[-30%]
+      max-[1024px]:left-[-40%] max-[1024px]:top-[0%]
+    `,
+  },
+  {
+    text: "Blockchain Developer",
+    className: `
+      top-[-16%] right-[-22%] lg:right-[-58%] rotate-[25deg]
+      max-[1024px]:right-[-58%] max-[1024px]:top-[-18%]
+    `,
+  },
+  {
+    text: "AI Engineers",
+    className: `
+      top-[8%] right-[-16%]
+      max-[1024px]:right-[-28%] max-[1024px]:top-[4%]
+    `,
+  },
+];
+
+const commonContentClasses = `
+  relative z-20 w-full text-center lg:text-left
+`;
+
+const commonHeadingClasses = `
+  font-montserrat font-semibold
+`;
+
+const commonParagraphClasses = `
+  mt-5 text-gray-400 leading-relaxed
+`;
 
 const Hero = () => {
   return (
-   <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-10 lg:px-16 pt-32 md:pt-36 lg:pt-40 pb-10 gap-10">
+    <section className="relative min-h-screen w-full overflow-hidden bg-black text-white">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-14">
+        {/* BACKGROUND TEXT */}
+        <h1
+          className="
+            absolute left-1/2 top-[20px] z-0 -translate-x-1/2
+            scale-x-[1.2] whitespace-nowrap bg-gradient-to-r
+            from-[#ff1d1d] via-[#ff4d4d] to-[#ff0000]
+            bg-clip-text font-mokoto leading-none tracking-[0.04em]
+            text-transparent pointer-events-none select-none
+            text-[42vw] sm:text-[20vw] md:text-[20vw]
+            lg:text-[18vw] xl:text-[18vw]
 
+            max-[1024px]:top-[10px]
+            max-[1024px]:text-[22vw]
 
- <h1 className="absolute left-1/2 -translate-x-1/2 
- text-[36vw] md:text-[26vw] lg:text-[20vw] -top-[100px] md:-top-[100px] lg:-top-[50px]
-  font-mokoto tracking-widest 
-  text-gradient-red whitespace-nowrap 
-  pointer-events-none z-0 select-none  ">
-  EQUINIX
-</h1>
+            max-[996px]:top-[20px]
+            max-[996px]:text-[24vw]
 
+            max-[768px]:top-[20px]
+            max-[768px]:text-[25vw]
 
+            max-[640px]:top-[50px]
+            max-[640px]:text-[20vw]
+          "
+        >
+          EQUINIX
+        </h1>
 
-      {/* LEFT SIDE */}
-      <div className="w-full lg:w-1/3 z-10 mt-10 lg:mt-[120px] text-center lg:text-left">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight">
-          Future-Ready <br />
-          <span className="text-gradient-red">Crypto</span> <br />
-          Infrastructure
-        </h2>
+        {/* HERO LAYOUT */}
+        <div
+          className="
+            relative flex min-h-[900px] items-start justify-between gap-8 xl:gap-0
 
-        <p className="text-gray-400 text-sm mt-4 font-montserrat leading-relaxed">
-          Connect, scale, and deploy Web3, blockchain, and AI
-          on a world-class infrastructure trusted by enterprises.
-        </p>
+            max-[996px]:min-h-[760px]
+            max-[996px]:gap-4
 
-        <button className="mt-6 bg-red-600 px-6 py-2 text-sm hover:bg-red-700 transition">
-          JOIN NOW
-        </button>
+            max-[768px]:min-h-auto
+            max-[768px]:flex-col
+            max-[768px]:items-center
+            max-[768px]:justify-start
+            max-[768px]:gap-14
+            max-[768px]:pt-[180px]
+            max-[768px]:pb-24
+            max-[768px]:text-center
+          "
+        >
+          {/* LEFT CONTENT */}
+          <div
+            className={`
+              ${commonContentClasses}
+              lg:w-[29%]
+
+              mt-[120px] left-[6%] lg:mt-[250px] lg:pr-2
+
+              max-[1024px]:mt-[210px]
+              max-[1024px]:left-[2%]
+              max-[1024px]:w-[24%]
+
+              max-[996px]:mt-[250px]
+              max-[996px]:w-[28%]
+              max-[996px]:left-0
+
+              max-[768px]:order-1
+              max-[768px]:mt-0
+              max-[768px]:w-full
+            `}
+          >
+            <h2
+              className={`
+                ${commonHeadingClasses}
+                leading-[1.02]
+                text-[36px]
+
+                max-[1024px]:text-[30px]
+                max-[996px]:text-[22px]
+                max-[768px]:text-[40px]
+                max-[480px]:text-[28px]
+              `}
+            >
+              Future-Ready <br />
+              <span className="text-[#ff1d1d]">Crypto</span>
+              <br />
+              Infrastructure
+            </h2>
+
+            <p
+              className={`
+                ${commonParagraphClasses}
+                mx-auto max-w-[480px] text-sm sm:text-base lg:mx-0
+
+                max-[996px]:text-[13px]
+                max-[996px]:leading-[1.7]
+
+                max-[768px]:mx-auto
+                max-[768px]:text-[16px]
+                max-[768px]:leading-[1.8]
+              `}
+            >
+              Connect, scale, and deploy Web3, blockchain, and AI on a
+              world-class infrastructure trusted by enterprises.
+            </p>
+
+            <button
+              className="
+                mt-8 border border-red-600 px-9 py-3 text-sm font-medium
+                transition hover:bg-red-600/10
+
+                max-[1024px]:px-7
+                max-[1024px]:py-2.5
+
+                max-[996px]:px-5
+                max-[996px]:py-2
+                max-[996px]:text-[12px]
+
+                max-[480px]:px-6
+              "
+            >
+              JOIN NOW
+            </button>
+          </div>
+
+          {/* CENTER IMAGE */}
+          <div
+            className="
+              relative z-20 mt-10 flex w-full items-center justify-center
+              lg:mt-[150px] lg:w-[30%]
+
+              max-[1024px]:mt-[130px]
+              max-[1024px]:w-[28%]
+
+              max-[996px]:mt-[170px]
+              max-[996px]:w-[34%]
+
+              max-[768px]:order-2
+              max-[768px]:mt-0
+              max-[768px]:w-full
+            "
+          >
+            <div className="relative flex items-center justify-center">
+              <img
+                src={robot}
+                alt="robot"
+                className="
+                  relative z-20 max-w-full object-contain
+                  w-[260px] sm:w-[340px] md:w-[430px]
+                  lg:w-[500px] xl:w-[580px] 2xl:w-[650px]
+
+                  -translate-y-6 sm:-translate-y-10
+                  md:-translate-y-14 xl:-translate-y-24
+
+                  max-[1024px]:w-[360px]
+
+                  max-[996px]:w-[290px]
+                  max-[996px]:translate-y-0
+
+                  max-[768px]:w-[300px]
+
+                  max-[480px]:w-[250px]
+                "
+              />
+
+              {/* FLOATING TAGS */}
+              {floatingTags.map((tag, index) => (
+                <div
+                  key={index}
+                  className={`
+                    hidden md:flex absolute z-30
+                    rounded-full border border-[#FFFFFF26]
+                    bg-[#2E2E2E1A] px-5 py-3 text-sm
+                    whitespace-nowrap text-white
+                    backdrop-blur-[20px]
+                    shadow-[0_0_25px_rgba(255,0,0,0.08)]
+
+                    max-[1024px]:scale-[0.82]
+                    max-[996px]:hidden
+
+                    ${tag.className}
+                  `}
+                >
+                  {tag.text}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div
+            className={`
+              ${commonContentClasses}
+              lg:w-[27%]
+
+              mt-10 lg:mt-[250px]
+
+              max-[1024px]:mt-[210px]
+              max-[1024px]:w-[24%]
+
+              max-[996px]:mt-[250px]
+              max-[996px]:w-[28%]
+
+              max-[768px]:order-3
+              max-[768px]:mt-0
+              max-[768px]:flex
+              max-[768px]:w-full
+              max-[768px]:max-w-[560px]
+              max-[768px]:flex-col
+              max-[768px]:items-center
+              max-[768px]:mx-auto
+            `}
+          >
+            <h2
+              className={`
+                ${commonHeadingClasses}
+                max-w-[520px]
+                leading-[1.05]
+                text-[36px]
+
+                max-[1024px]:text-[30px]
+                max-[996px]:text-[22px]
+                max-[768px]:text-[34px]
+                max-[480px]:text-[28px]
+              `}
+            >
+              A <span className="text-[#ff1d1d]">Smarter</span> Way to
+              <br />
+              Earn in Web3
+            </h2>
+
+            <p
+              className={`
+                ${commonParagraphClasses}
+                mx-auto max-w-[500px] text-sm sm:text-base lg:mx-0
+
+                max-[996px]:text-[13px]
+                max-[996px]:leading-[1.7]
+
+                max-[768px]:mx-auto
+                max-[768px]:text-[16px]
+                max-[768px]:leading-[1.8]
+              `}
+            >
+              Equinix AI introduces a Network Rewards Model where users earn
+              through:
+            </p>
+
+            {/* FEATURES */}
+            <div
+              className="
+                mt-6 flex flex-col gap-3
+                items-center lg:items-start
+                max-[768px]:items-center
+              "
+            >
+              {features.map((item) => (
+                <div
+                  key={item}
+                  className="
+                    flex w-fit items-center gap-2 rounded-full
+                    border border-[#341111] bg-[#120303]
+                    px-4 py-2 transition
+                    hover:border-red-600
+
+                    max-[1024px]:px-3
+                    max-[1024px]:py-2
+
+                    max-[996px]:py-1.5
+                  "
+                >
+                  <span
+                    className="
+                      h-2 w-2 rounded-full
+                      bg-gradient-to-r from-white via-red-500 to-red-700
+                      shadow-[0_0_8px_rgba(255,0,0,0.6)]
+                    "
+                  />
+
+                  <span className="text-[16px] text-gray-200 sm:text-sm max-[996px]:text-[12px]">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* CENTER */}
-      <div className="w-full lg:w-1/3 relative flex justify-center z-10">
-<img src={robot} className="w-[250px] md:w-[320px] lg:w-[420px]  -translate-y-10 md:-translate-y-16 lg:-translate-y-24" />
-
-        {/* FLOAT TAGS */}
-        <div className="hidden md:block absolute top-10 left-[-20px] bg-black border border-gray-700 px-3 py-1 text-xs rounded-full">
-          Global Community Builders
-        </div>
-
-        <div className="hidden md:block  absolute top-20 right-[-30px] bg-black border border-gray-700 px-3 py-1 text-xs rounded-full">
-          Blockchain Developer
-        </div>
-
-        <div className="hidden md:block  absolute bottom-20 left-[-30px] bg-black border border-gray-700 px-3 py-1 text-xs rounded-full">
-          Web3 Marketers
-        </div>
-
-        <div className="hidden md:block  absolute bottom-10 right-[-20px] bg-black border border-gray-700 px-3 py-1 text-xs rounded-full">
-          AI Engineers
-        </div>
-
-      </div>
-
-      {/* RIGHT SIDE */}
-    <div className="w-full lg:w-1/4 z-10 mt-10 lg:mt-[210px] text-center lg:text-left">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight">
-          A <span className="text-gradient-red">Smarter</span> Way to <br />
-          Earn in Web3
-        </h2>
-
-        <span className="text-gray-400 font-montserrat text-sm mt-4 leading-relaxed">
-        Equinix AI introduces a Network Rewards Model where users earn through:</span>
-
-      <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
-  {[
-    "Ecosystem Participation",
-    "Referral-Based Growth",
-    "DeFi Staking & Utilities",
-    "Node & Infrastructure Support",
-  ].map((item, i) => (
-    <div
-      key={i}
-      className="flex items-center gap-2 bg-[#110101] border font-montserrat border-gray-800 rounded-full px-4 py-2 text-sm hover:border-red-600 transition"
-    >
-      {/* Gradient Circle */}
-      <span className="w-3 h-3 bg-gradient-to-r from-[#FFFFFF] via-[#FF0404] to-[#CF0000] rounded-full"></span>
-
-      {/* Text */}
-      <span>{item}</span>
-    </div>
-  ))}
-</div>
-
-      </div>
-
     </section>
   );
 };

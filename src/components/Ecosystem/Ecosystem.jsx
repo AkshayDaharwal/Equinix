@@ -5,13 +5,13 @@ const Ecosystem = () => {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden flex items-center px-6 md:px-20">
 
-      {/* Gradient Glow */}
-      <div className="relative w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
+      {/* Gradient Glow (hidden on small screens) */}
+      <div className="hidden md:block absolute right-0 top-0 w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 items-center">
 
         {/* LEFT SIDE */}
-       <div className="w-full max-w-[620px] ml-[-100px]">
+      <div className="w-full max-w-[620px] md:ml-[-100px]">
 
   {/* Label */}
   <p className="text-red-500 font-mokoto tracking-[4px] text-4xl mb-6 uppercase">

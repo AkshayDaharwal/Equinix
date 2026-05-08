@@ -21,19 +21,19 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-[#131313] border-t border-[#1a1a1a] text-white">
-      <div className="max-w-7xl mx-auto px-10 py-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 md:py-12">
         {/* Top Section */}
-        <div className="grid grid-cols-4 gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-20">
           {/* LOGO + TEXT */}
           <div>
             {/* Put logo in public/assets/equinix-logo.png */}
             <img
               src={logo}
               alt="Equinix AI"
-              className="w-[180px] cursor-pointer object-contain mb-5"
+              className="w-[140px] sm:w-[160px] md:w-[180px] cursor-pointer object-contain mb-5 max-w-full"
             />
 
-            <p className="text-[#909090] text-blur text-[13px] leading-6 font-montserrat max-w-[220px]">
+            <p className="text-[#909090] text-blur text-[13px] leading-6 font-montserrat max-w-full md:max-w-[220px]">
               Next-generation crypto infrastructure for a decentralized world
             </p>
           </div>

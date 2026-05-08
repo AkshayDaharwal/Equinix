@@ -4,19 +4,19 @@ import StrengthCard from "./Strength";
 
 const AboutSection = () => {
   return (
-    <section className="bg-black text-white px-16 py-20">
+    <section className="bg-black text-white px-6 md:px-16 py-12 md:py-20 overflow-x-hidden">
 
-      <div className="flex gap-10">
+      <div className="flex flex-col md:flex-row gap-10">
 
   {/* LEFT IMAGE */}
-  <div className="w-1/2 relative flex justify-center">
-    <img src={robot} className="w-[420px] object-contain z-10" alt="robot" />
+  <div className="w-full md:w-1/2 relative flex justify-center">
+    <img src={robot} className="w-[320px] sm:w-[420px] lg:w-[520px] max-w-full object-contain z-10" alt="robot" />
 
    
   </div>
 
   {/* RIGHT CONTENT */}
-  <div className="w-1/2 flex flex-col gap-6">
+  <div className="w-full md:w-1/2 flex flex-col gap-6">
 
     {/* TOP TEXT */}
     <div>
@@ -33,7 +33,7 @@ const AboutSection = () => {
     <div className="flex items-start gap-6">
       <AboutCard />
 
-      <p className="text-gray-400 font-montserrat text-sm leading-relaxed max-w-[400px]">
+      <p className="text-gray-400 font-montserrat text-sm leading-relaxed max-w-full md:max-w-[400px]">
         “Equinix, founded in 1998 and headquartered in Redwood City,
         is a global leader in digital infrastructure, enabling secure,
         scalable, and high-performance interconnection for businesses worldwide.”
@@ -79,7 +79,7 @@ const AboutSection = () => {
 
     {/* LEFT */}
     <div>
-      <h3 className="text-xl font-montserrat font-semibold tracking-wide">
+      <h3 className="text-2xl font-montserrat font-semibold tracking-wide">
         COMPANY STRENGTH
       </h3>
 
@@ -97,11 +97,11 @@ const AboutSection = () => {
       </p>
       
     </div>
-<div className="relative w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
+<div className="hidden md:block relative w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
   </div>
 
   {/* CARDS */}
-  <div className="flex gap-40 flex-wrap">
+  <div className="flex gap-10 md:gap-40 flex-wrap">
     <StrengthCard text="260+ Data Centers (IBX)" />
     <StrengthCard text="10,500+ Global Customers" />
     <StrengthCard text="33 Countries Presence" />

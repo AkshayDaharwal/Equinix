@@ -12,18 +12,18 @@ const roadmapItems = [
 const FutureVision = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      {/* Top Left Glow */}
-      <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-red-900/40 blur-3xl rounded-full" />
+      {/* Top Left Glow (hidden on small screens) */}
+      <div className="hidden md:block absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-red-900/40 blur-3xl rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-10 py-16">
-        <div className="grid grid-cols-2 gap-20 items-center min-h-[90vh]">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center min-h-[90vh]">
           {/* LEFT IMAGE SECTION */}
           <div className="relative flex justify-center">
             {/* Put your image in public/assets/robot-vision.png */}
             <img
               src={robot}
               alt="Robot Vision"
-              className="w-[520px] h-[640px] object-cover mt-8 mr-16 rounded-[28px]"
+              className="w-[320px] sm:w-[420px] md:w-[520px] h-auto object-cover mt-8 md:mr-16 rounded-[28px] max-w-full"
             />
           </div>
 

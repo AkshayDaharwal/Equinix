@@ -18,7 +18,7 @@ const cards = [
 
 const FeatureCard = ({ title }) => {
   return (
-    <div className="w-[180px] h-[190px] rounded-2xl bg-gradient-to-b from-[#000000] to-[#310000]  flex flex-col items-center justify-center text-center ">
+    <div className="w-[160px] sm:w-[180px] h-[190px] rounded-2xl bg-gradient-to-b from-[#000000] to-[#310000]  flex flex-col items-center justify-center text-center ">
       <div className="relative mb-8">
         <Gift className="w-10 h-10 text-white" strokeWidth={1.8} />
         <UserRound
@@ -37,11 +37,11 @@ const FeatureCard = ({ title }) => {
 const EquinixAIDefiProgram = () => {
   return (
     <div className="min-h-screen bg-black overflow-hidden relative text-white">
-      {/* Background Glow */}
-      <div className="absolute bottom-[-120px] left-[-80px] w-[340px] h-[240px] bg-red-900/40 blur-3xl rounded-full" />
+      {/* Background Glow (hidden on small screens) */}
+      <div className="hidden md:block absolute bottom-[-120px] left-[-80px] w-[340px] h-[240px] bg-red-900/40 blur-3xl rounded-full" />
 
-      <div className="relative z-10 px-10 py-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 gap-12 items-center min-h-[90vh]">
+      <div className="relative z-10 px-6 md:px-10 py-10 md:py-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center min-h-[90vh]">
           {/* LEFT SECTION */}
           <div>
             <h3 className="text-gradient-red font-mokoto text-[34px]  mb-3 leading-none">

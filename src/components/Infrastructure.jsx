@@ -4,12 +4,12 @@ import box from "../assets/homepage/robots/box.png";
 const EquinixBlockchainPage = () => {
   return (
     <div className="min-h-screen w-full bg-black text-white overflow-hidden relative font-sans">
-      {/* Background Glow */}
-      <div className="absolute bottom-0 right-0 w-[320px] h-[220px] bg-red-900/30 blur-3xl rounded-full" />
+      {/* Background Glow (hidden on small screens) */}
+      <div className="hidden md:block absolute bottom-0 right-0 w-[320px] h-[220px] bg-red-900/30 blur-3xl rounded-full" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-8">
         {/* Header */}
-        <div className="mb-8 ml-[-40px] ">
+        <div className="mb-8 md:ml-[-40px] ">
           <h2 className="text-[#ff2b2b] text-gradient-red text-4xl font-mokoto tracking-wide uppercase">
             EQUINIX INFRA
           </h2>
@@ -42,7 +42,7 @@ const EquinixBlockchainPage = () => {
             />
 
             {/* LEFT TOP CARD */}
-            <div className="absolute left-[-280px] top-[90px] flex items-center">
+            <div className="hidden md:flex absolute left-[-280px] top-[90px] flex items-center">
               <div className="w-[400px] font-montserrat border ml-[-120px] border-gray-500 py-5 px-5 text-center text-sm leading-6 text-gray-100 bg-black/20 backdrop-blur-sm">
                 High-performance blockchain node deployment
               </div>
@@ -55,7 +55,7 @@ const EquinixBlockchainPage = () => {
             </div>
 
             {/* LEFT BOTTOM CARD */}
-            <div className="absolute left-[-280px] bottom-[90px] flex items-center">
+            <div className="hidden md:flex absolute left-[-280px] bottom-[90px] flex items-center">
               <div className="w-[400px] font-montserrat border ml-[-120px] border-gray-500 py-5 px-5 text-center text-sm leading-6 text-gray-100 bg-black/20 backdrop-blur-sm">
                 Ultra-low latency connectivity for trading & DeFi
               </div>
@@ -68,7 +68,7 @@ const EquinixBlockchainPage = () => {
             </div>
 
             {/* RIGHT TOP CARD */}
-            <div className="absolute right-[-320px] top-[90px] flex items-center flex-row-reverse">
+            <div className="hidden md:flex absolute right-[-320px] top-[90px] flex items-center flex-row-reverse">
               <div className="w-[400px] mr-[-120px] font-montserrat border border-gray-500 py-5 px-5 text-center text-sm leading-6 text-gray-100 bg-black/20 backdrop-blur-sm">
                 Secure private interconnection (no reliance on public internet)
               </div>
@@ -81,7 +81,7 @@ const EquinixBlockchainPage = () => {
             </div>
 
             {/* RIGHT BOTTOM CARD */}
-            <div className="absolute right-[-320px] bottom-[80px] flex items-center flex-row-reverse">
+            <div className="hidden md:flex absolute right-[-320px] bottom-[80px] flex items-center flex-row-reverse">
               <div className="w-[400px] mr-[-120px] font-montserrat border border-gray-500 py-5 px-5 text-center text-sm leading-6 text-gray-100 bg-black/20 backdrop-blur-sm">
                 Infrastructure support for exchanges, wallets, and Web3 apps
               </div>
@@ -94,8 +94,8 @@ const EquinixBlockchainPage = () => {
             </div>
           </div>
 
-          {/* Bottom Left Description */}
-         <div className="absolute mb-[-40px] font-montserrat bottom-0 left-[-50px] w-[700px] text-[15px] leading-8 text-gray-400">
+          {/* Bottom Left Description (hidden on small screens) */}
+         <div className="hidden md:block absolute mb-[-40px] font-montserrat bottom-0 left-[-50px] w-[700px] text-[15px] leading-8 text-gray-400">
   Unlike typical crypto platforms, we focus on real infrastructure utility,
   ensuring that every transaction, node, and network interaction runs
   smoothly and securely.
