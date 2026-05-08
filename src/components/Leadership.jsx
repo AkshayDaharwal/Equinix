@@ -28,7 +28,7 @@ const Leadership = () => {
     <section className="relative py-20 px-6 md:px-12 lg:px-20 bg-black overflow-hidden">
       {/* RED GRADIENT SIDE */}
       {/* <div className="absolute right-0 top-0 w-[40%] h-full "></div> */}
-      <div className="absolute right-0 top-0 w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
+      <div className="hidden md:block absolute right-0 top-0 w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
       {/* HEADER */}
       <div className="text-center mb-12 relative z-10">
         <p className=" font-mokoto tracking-widest text-gradient-red text-3xl mb-2">

@@ -54,15 +54,15 @@ const [activeImage, setActiveImage] = useState(0)
       {/* Right Border */}
       <div className="absolute right-4 top-0 h-full w-[1px] bg-gray-800" />
 
-      <div className="max-w-7xl mx-auto px-8 py-14 relative z-10">
-        <div className="grid grid-cols-2 gap-16 items-start min-h-[90vh]">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start min-h-[90vh]">
           {/* LEFT SECTION */}
           <div>
             <h3 className="text-gradient-red text-[32px] font-mokoto uppercase  mb-4">
               FAQ
             </h3>
 
-            <h1 className=" text-[55px] leading-[82px] tracking-[-2px] font-montserrat mb-12 uppercase whitespace-nowrap">
+            <h1 className=" text-[55px] leading-[82px] tracking-[-2px] font-montserrat mb-12 uppercase whitespace-normal md:whitespace-nowrap">
               Frequently Asked
               <br />
               Questions
@@ -103,7 +103,7 @@ const [activeImage, setActiveImage] = useState(0)
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.35 }}
                         >
-                          <div className="px-8 pb-8 max-w-[520px] text-gray-400 text-[14px] leading-8 font-montserrat">
+                          <div className="px-8 pb-8 max-w-full md:max-w-[520px] text-gray-400 text-[14px] leading-8 font-montserrat">
                             {faq.answer}
                           </div>
                         </motion.div>
@@ -117,7 +117,7 @@ const [activeImage, setActiveImage] = useState(0)
 
           {/* RIGHT SECTION */}
 <div className="pt-12 relative">
-  <p className="text-gray-300 text-[15px] leading-8 max-w-[520px] font-montserrat mb-10">
+  <p className="text-gray-300 text-[15px] leading-8 max-w-full md:max-w-[520px] font-montserrat mb-10">
     Equinix enables secure crypto, Web3, and DeFi operations with
     high-performance infrastructure, low latency, connectivity,
     enterprise security, and global interconnection trusted by
@@ -161,10 +161,10 @@ const [activeImage, setActiveImage] = useState(0)
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7 }}
-        className="w-[450px] h-[300px] object-cover rounded-[8px]"
+        className="w-[320px] sm:w-[380px] md:w-[450px] h-auto max-w-full object-cover rounded-[8px]"
       />
 
-      <p className="mt-8 text-gray-300 text-[14px] leading-8 max-w-[450px] font-montserrat">
+      <p className="mt-8 text-gray-300 text-[14px] leading-8 max-w-full md:max-w-[450px] font-montserrat">
         Equinix powers crypto and Web3 with secure, high-performance
         infrastructure, enabling blockchain deployment, DeFi
         connectivity, and enterprise-grade interconnection trusted
