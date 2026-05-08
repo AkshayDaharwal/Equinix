@@ -59,10 +59,6 @@ const AboutSection = () => {
           />
         </div>
 
-<<<<<<< HEAD
-  {/* RIGHT CONTENT */}
-  <div className="w-full md:w-1/2 flex flex-col gap-6">
-=======
         {/* RIGHT CONTENT */}
         <div className="w-1/2 flex flex-col gap-6">
           {/* TOP TEXT */}
@@ -70,7 +66,6 @@ const AboutSection = () => {
             <p className="text-transparent font-mokoto bg-clip-text text-gradient-red text-4xl tracking-[4px] uppercase">
               ABOUT US
             </p>
->>>>>>> 7c31868eff06a3f0149ab5ca18bf63d2e090f67f
 
             <h2 className="text-6xl font-montserrat mt-2 leading-tight">
               WHO WE ARE
@@ -89,20 +84,11 @@ const AboutSection = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
-      <p className="text-gray-400 font-montserrat text-sm leading-relaxed max-w-full md:max-w-[400px]">
-        “Equinix, founded in 1998 and headquartered in Redwood City,
-        is a global leader in digital infrastructure, enabling secure,
-        scalable, and high-performance interconnection for businesses worldwide.”
-      </p>
-    </div>
-=======
           {/* ECOSYSTEM */}
           <div className="flex flex-col gap-3">
             <h3 className="text-xl font-semibold font-montserrat">
               EQUINIX SINGAPORE ECOSYSTEM
             </h3>
->>>>>>> 7c31868eff06a3f0149ab5ca18bf63d2e090f67f
 
             <p className="text-gray-400 font-montserrat text-sm">
               Singapore is home to one of the world’s top internet peering
@@ -148,40 +134,6 @@ const AboutSection = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
-    {/* LEFT */}
-    <div>
-      <h3 className="text-2xl font-montserrat font-semibold tracking-wide">
-        COMPANY STRENGTH
-      </h3>
-
-      <p className="text-gray-300 font-montserrat text-sm mt-2">
-        Equinix Global Scale, Reach & Infrastructure Leadership
-      </p>
-    </div>
-
-    {/* RIGHT TEXT */}
-   <div className="flex-1 pl-6 ">
-      <p className="text-gray-400 font-montserrat text-sm leading-relaxed">
-        Delivering unmatched global infrastructure with extensive data centers,
-        diverse customers, and scalable presence, driving secure connectivity
-        and sustained digital growth worldwide.
-      </p>
-      
-    </div>
-<div className="hidden md:block relative w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
-  </div>
-
-  {/* CARDS */}
-  <div className="flex gap-10 md:gap-40 flex-wrap">
-    <StrengthCard text="260+ Data Centers (IBX)" />
-    <StrengthCard text="10,500+ Global Customers" />
-    <StrengthCard text="33 Countries Presence" />
-    <StrengthCard text="REIT Structure (Since 2015)" />
-  </div>
-
-</div>
-=======
           {/* RIGHT TEXT */}
           <div className="flex-1 pl-6 ">
             <p className="text-gray-400 font-montserrat text-sm leading-relaxed">
@@ -192,7 +144,6 @@ const AboutSection = () => {
           </div>
           <div className="relative w-[200px] h-[150px] bg-red-900/100 blur-[100px]"></div>
         </div>
->>>>>>> 7c31868eff06a3f0149ab5ca18bf63d2e090f67f
 
         {/* CARDS */}
         <div className="flex gap-40 flex-wrap">
