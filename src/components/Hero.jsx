@@ -40,15 +40,18 @@ const floatingTags = [
 ];
 
 const commonContentClasses = `
-  relative z-20 w-full text-center lg:text-left
+    hero-content
+  lg:w-[29%]
 `;
 
 const commonHeadingClasses = `
-  font-montserrat font-semibold
+    hero-heading
+  leading-[1.02]
 `;
 
 const commonParagraphClasses = `
-  mt-5 text-gray-400 leading-relaxed
+    hero-paragraph
+  mx-auto max-w-[480px]
 `;
 
 const Hero = () => {
@@ -59,13 +62,14 @@ const Hero = () => {
         <h1
           className="
             absolute left-1/2 top-[20px] z-0 -translate-x-1/2
-            scale-x-[1.2] whitespace-nowrap bg-gradient-to-r
-            from-[#ff1d1d] via-[#ff4d4d] to-[#ff0000]
+            scale-x-[1.2] whitespace-nowrap bg-[linear-gradient(90deg,#ff1d1d_0%,#ff4040_25%,#8b0000_50%,#ff4040_75%,#ff1d1d_100%)]
+    bg-[length:250%_100%]
+    animate-textSweep
             bg-clip-text font-mokoto leading-none tracking-[0.04em]
             text-transparent pointer-events-none select-none
             text-[42vw] sm:text-[20vw] md:text-[20vw]
             lg:text-[18vw] xl:text-[18vw]
-
+          [filter:drop-shadow(0_15px_4px_rgba(100,30,20,0.55))]
             max-[1024px]:top-[10px]
             max-[1024px]:text-[22vw]
 
@@ -192,7 +196,7 @@ const Hero = () => {
               max-[768px]:w-full
             "
           >
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center ">
               <img
                 src={robot}
                 alt="robot"
@@ -214,23 +218,32 @@ const Hero = () => {
                   max-[480px]:w-[250px]
                 "
               />
+              {/* RED SCANNER */}
+<div
+  className="
+    absolute z-30
+    h-[20px] w-full
+
+    bg-gradient-to-b
+    from-transparent
+    via-red-700
+    to-transparent
+
+    blur-[2px]
+    animate-scanner shadow-[0_0_9px_rgba(255,0,0,0.4)]
+    pointer-events-none
+  "
+></div>
 
               {/* FLOATING TAGS */}
               {floatingTags.map((tag, index) => (
                 <div
                   key={index}
                   className={`
-                    hidden md:flex absolute z-30
-                    rounded-full border border-[#FFFFFF26]
-                    bg-[#2E2E2E1A] px-5 py-3 text-sm
-                    whitespace-nowrap text-white
-                    backdrop-blur-[20px]
-                    shadow-[0_0_25px_rgba(255,0,0,0.08)]
-
-                    max-[1024px]:scale-[0.82]
-                    max-[996px]:hidden
-
-                    ${tag.className}
+                    floating-tag
+  max-[1024px]:scale-[0.82]
+  max-[996px]:hidden
+  ${tag.className}
                   `}
                 >
                   {tag.text}
@@ -310,22 +323,17 @@ const Hero = () => {
                 <div
                   key={item}
                   className="
-                    flex w-fit items-center gap-2 rounded-full
-                    border border-[#341111] bg-[#120303]
-                    px-4 py-2 transition
-                    hover:border-red-600
+                    feature-item
+  max-[1024px]:px-3
+  max-[1024px]:py-2
+  max-[996px]:py-1.5
 
-                    max-[1024px]:px-3
-                    max-[1024px]:py-2
-
-                    max-[996px]:py-1.5
+                   
                   "
                 >
                   <span
                     className="
-                      h-2 w-2 rounded-full
-                      bg-gradient-to-r from-white via-red-500 to-red-700
-                      shadow-[0_0_8px_rgba(255,0,0,0.6)]
+                     feature-dot
                     "
                   />
 
