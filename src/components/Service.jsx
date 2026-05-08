@@ -19,7 +19,7 @@ const IndustriesSection = () => {
           <FaUniversity className="text-red-600 w-5 h-5 mt-1" />
 
           <div>
-            <h4 className="text-2xl font-montserrat ">
+            <h4 className="text-2xl font-montserrat premium-heading ">
               Financial Services & Banking
             </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2 ">
@@ -33,7 +33,7 @@ const IndustriesSection = () => {
         <div className="flex items-start gap-3 py-4 bg-gray-200 text-black rounded-lg my-3 px-4">
           <Cloud className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">
+            <h4 className="text-2xl font-montserrat premium-heading">
               Cloud & IT Infrastructure
             </h4>
             <p className="text-sm font-montserrat mt-2">
@@ -47,7 +47,7 @@ const IndustriesSection = () => {
         <div className="flex items-start gap-3 py-4 border-b border-gray-500">
           <Dna className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">
+            <h4 className="text-2xl font-montserrat premium-heading">
               Healthcare & Life Sciences
             </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2">
@@ -59,7 +59,9 @@ const IndustriesSection = () => {
         <div className="flex items-start gap-3 py-4 border-b border-gray-500">
           <Tv className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">Media & Communication</h4>
+            <h4 className="text-2xl font-montserrat premium-heading">
+              Media & Communication
+            </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2">
               High-speed delivery for streaming content and communication
               networks.
@@ -70,7 +72,7 @@ const IndustriesSection = () => {
         <div className="flex items-start gap-3 py-4 border-b border-gray-500">
           <Settings className="text-red-600 w-5 h-5 mt-1" />
           <div>
-            <h4 className="text-2xl font-montserrat">
+            <h4 className="text-2xl font-montserrat premium-heading">
               Manufacturing & Engineering
             </h4>
             <p className="text-gray-400 text-sm font-montserrat mt-2">

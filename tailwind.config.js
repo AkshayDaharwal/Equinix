@@ -12,15 +12,21 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
-     extend: {
+    extend: {
       fontFamily: {
         mokoto: ["mokoto", "sans-serif"],
-         montserrat: ["montserrat", "sans-serif"],
-         oxanium: ["oxanium", "sans-serif"],
-           inter: ["inter", "sans-serif"], 
+        montserrat: ["montserrat", "sans-serif"],
+        oxanium: ["oxanium", "sans-serif"],
+        inter: ["inter", "sans-serif"],
+      },
+
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
       },
     },
   },
+
   plugins: [],
-}
+};

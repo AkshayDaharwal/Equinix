@@ -18,24 +18,94 @@ const FutureVision = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-10 py-16">
         <div className="grid grid-cols-2 gap-20 items-center min-h-[90vh]">
           {/* LEFT IMAGE SECTION */}
-          <div className="relative flex justify-center group cursor-pointer">
-            {/* Gradient Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-red-900/0 via-red-600/30 to-red-900/0 blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-[40px]" />
+          <div className="relative flex justify-center items-center group perspective-[2000px]">
+            {/* Animated Background Glow */}
+            <div className="absolute inset-0 rounded-[40px] bg-red-500/10 blur-[80px] scale-110 opacity-60 group-hover:opacity-100 transition-all duration-700 ease-out" />
 
-            <motion.img
-              src={robot}
-              alt="Robot Vision"
+            {/* Rotating Ring 1 */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                repeat: Infinity,
+                duration: 18,
+                ease: "linear",
+              }}
+              className="absolute w-[650px] h-[650px] rounded-full border border-red-500/20"
+            />
+
+            {/* Rotating Ring 2 */}
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{
+                repeat: Infinity,
+                duration: 25,
+                ease: "linear",
+              }}
+              className="absolute w-[500px] h-[500px] rounded-full border border-red-400/10"
+            />
+
+            {/* Floating Particles */}
+            <motion.div
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 4,
+                ease: "easeInOut",
+              }}
+              className="absolute top-16 left-10 w-3 h-3 rounded-full bg-red-500 blur-[2px]"
+            />
+
+            <motion.div
+              animate={{
+                y: [0, 20, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+              }}
+              className="absolute bottom-24 right-10 w-4 h-4 rounded-full bg-white blur-[2px]"
+            />
+
+            {/* Main 3D Card */}
+            <motion.div
               whileHover={{
-                y: -10,
-                scale: 1.03,
+                rotateX: 5,
+                rotateY: -5,
+                scale: 1.02,
+                y: -6,
               }}
               transition={{
                 type: "spring",
-                stiffness: 180,
-                damping: 12,
+                stiffness: 90,
+                damping: 20,
+                mass: 1.2,
               }}
-              className="relative z-10 w-[520px] h-[640px] object-cover mt-8 mr-16 rounded-[28px]"
-            />
+              className="relative preserve-3d transition-all duration-500 ease-out"
+              style={{
+                transformStyle: "preserve-3d",
+              }}
+            >
+              {/* Glass Reflection */}
+              <div className="absolute inset-0 rounded-[32px] bg-gradient-to-tr from-white/10 via-transparent to-transparent z-20 pointer-events-none" />
+
+              {/* Border Glow */}
+              <div className="absolute inset-0 rounded-[32px] border border-red-500/30 shadow-[0_0_40px_rgba(255,0,0,0.35)] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out" />
+
+              {/* Robot Image */}
+              <motion.img
+                src={robot}
+                alt="Robot Vision"
+                className="relative z-10 w-[500px] h-[620px] object-cover rounded-[30px] 
+shadow-[0_0_80px_rgba(255,0,0,0.25)] 
+transition-all duration-700 ease-out"
+                style={{
+                  transform: "translateZ(60px)",
+                }}
+              />
+            </motion.div>
           </div>
 
           {/* RIGHT CONTENT */}

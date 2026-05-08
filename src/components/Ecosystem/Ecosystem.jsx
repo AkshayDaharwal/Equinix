@@ -44,16 +44,20 @@ const Ecosystem = () => {
           {/* TOP RIGHT */}
           <motion.div
             animate={{
-              y: [0, -12, 0],
-              x: [0, 8, 0],
+              y: [0, -6, 0],
             }}
             transition={{
-              duration: 4,
+              duration: 5,
               repeat: Infinity,
-              ease: "easeInOut",
+              repeatType: "mirror",
+              ease: [0.42, 0, 0.58, 1],
+            }}
+            style={{
+              willChange: "transform",
+              transform: "translateZ(0)",
             }}
             className="absolute z-30 top-[130px] right-[40px] w-[350px] h-[170px]
-  border border-red-600 rounded-full px-10 py-6 
+  border border-red-600 rounded-[80px] px-10 py-6 
   bg-black backdrop-blur-sm
   flex flex-col justify-center text-left items-center"
           >
@@ -72,7 +76,7 @@ const Ecosystem = () => {
           <motion.div
             animate={{
               y: [0, 10, 0],
-              x: [0, -10, 0],
+             x: [0, -10, 0],
             }}
             transition={{
               duration: 4,
@@ -80,7 +84,7 @@ const Ecosystem = () => {
               ease: "easeInOut",
             }}
             className="absolute top-[210px] left-[-60px]  w-[350px] h-[170px]
-    border border-red-600 rounded-full px-10 py-6 y-50 z-30
+    border border-red-600 rounded-[80px] px-10 py-6  z-30
     bg-black backdrop-blur-sm  flex flex-col justify-center text-left items-center"
           >
             <h3 className="text-white text-[25px] font-montserrat mb-2">
@@ -96,7 +100,7 @@ const Ecosystem = () => {
           {/* BOTTOM RIGHT */}
           <motion.div
             animate={{
-              y: [0, -8, 0],
+              y: [0, -6, 0],
               x: [0, 10, 0],
             }}
             transition={{
@@ -105,7 +109,7 @@ const Ecosystem = () => {
               ease: "easeInOut",
             }}
             className="absolute bottom-[130px] right-[20px] top-[300px]  w-[350px] h-[170px]
-    border border-red-600 rounded-full px-10 py-6 z-30
+    border border-red-600 rounded-[80px] px-10  z-30
     bg-black backdrop-blur-sm  flex flex-col justify-center text-left items-center"
           >
             <h3 className="text-white text-[20px] font-montserrat mb-2">
@@ -122,8 +126,8 @@ const Ecosystem = () => {
           {/* BOTTOM LEFT */}
           <motion.div
             animate={{
-              y: [0, 8, 0],
-              x: [0, -8, 0],
+              y: [0, -6, 0],
+             x: [0, -8, 0],
             }}
             transition={{
               duration: 4,
@@ -131,7 +135,7 @@ const Ecosystem = () => {
               ease: "easeInOut",
             }}
             className="absolute bottom-[10px] w-[350px] h-[170px] left-[-60px] 
-    border border-red-600 rounded-full px-10 py-6 y-50 z-30
+    border border-red-600 rounded-[80px] px-10 py-6 z-30
     bg-black backdrop-blur-sm  flex flex-col justify-center text-left items-center"
           >
             <h3 className="text-white text-[20px] font-montserrat mb-2">

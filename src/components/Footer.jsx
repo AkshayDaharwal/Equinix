@@ -1,15 +1,10 @@
-import React from "react"
+import React from "react";
 import { motion } from "framer-motion";
 import logo from "../assets/homepage/EQUINIXLOGO/EQUINIXLOGO.png";
 
 const Footer = () => {
   const footerLinks = {
-    "Quick Links": [
-      "About Us",
-      "Features",
-      "Why Choose Us",
-      "FAQ",
-    ],
+    "Quick Links": ["About Us", "Features", "Why Choose Us", "FAQ"],
     Community: ["Telegram", "Twitter (X)", "GitHub"],
     Contact: [
       "79 Robinson Road",
@@ -17,7 +12,7 @@ const Footer = () => {
       "contact@equinixai.com",
       "www.EquinixAI.com",
     ],
-  }
+  };
 
   return (
     <footer className="w-full bg-[#131313] border-t border-[#1a1a1a] text-white">
@@ -45,20 +40,30 @@ const Footer = () => {
                 {title}
               </h3>
 
-
               <ul className="flex flex-col gap-4">
                 {links.map((link, i) => (
                   <motion.li
                     key={i}
                     whileHover={{ x: 6 }}
-                    transition={{ duration: 0.2 }}
-                    className="cursor-pointer text-gray-400 hover:text-white text-[14px] font-montserrat w-fit relative"
+                    transition={{ duration: 0.25 }}
+                    className="cursor-pointer text-[14px] font-montserrat w-fit relative"
                   >
-                    <span className="relative group">
-                      {link}
+                    <span className="relative group inline-block">
+                      {/* NORMAL TEXT */}
+                      <span className="text-gray-400 transition-opacity duration-500 group-hover:opacity-0">
+                        {link}
+                      </span>
 
-                      {/* Animated underline */}
-                      <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+                      {/* GRADIENT TEXT */}
+                      <span
+                        className="absolute left-0 top-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r
+        from-[#FF0404]  via-[#FF7878] to-[#CF0000] bg-clip-text text-transparent whitespace-nowrap "
+                      >
+                        {link}
+                      </span>
+
+                      {/* UNDERLINE */}
+                      <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-red-500 transition-all duration-500 group-hover:w-full" />
                     </span>
                   </motion.li>
                 ))}
@@ -79,7 +84,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

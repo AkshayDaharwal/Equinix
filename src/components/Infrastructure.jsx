@@ -43,7 +43,7 @@ const EquinixBlockchainPage = () => {
             <img
               src={box}
               alt="Center Structure"
-              className="relative hover:cursor-pointer z-10 w-[350px] md:w-[450px] object-contain animate-floating drop-shadow-[0_0_40px_rgba(200,0,0,0.35)]"
+             className="relative z-10 w-[350px] md:w-[450px] object-contain animate-smoothOrbit drop-shadow-[0_0_40px_rgba(200,0,0,0.35)]"
             />
 
             {/* LEFT TOP CARD */}

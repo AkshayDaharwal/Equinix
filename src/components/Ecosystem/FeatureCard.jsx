@@ -3,7 +3,7 @@ import React from "react";
 const FeatureCard = ({ title, points, className }) => {
   return (
     <div
-      className={`absolute border border-red-500/40 rounded-[24px] p-6 w-[280px] backdrop-blur-md bg-black/40 ${className}`}
+      className={`absolute border border-red-500/40 rounded-[24px] p-6 w-[280px] backdrop-blur-md bg-black ${className}`}
     >
       <h3 className="text-white text-lg font-semibold mb-3">{title}</h3>
 
