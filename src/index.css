@@ -82,10 +82,11 @@ body {
   transform-style: preserve-3d;
 }
 
+/* footer */
 
 .premium-heading {
   @apply relative inline-block
-  text-2xl font-montserrat hover:cursor-pointer
+  text-[15px] font-montserrat hover:cursor-pointer
   transition-all duration-500 ease-out;
 }
 
@@ -99,9 +100,11 @@ body {
   to-[#CF0000];
 }
 
-.premium-heading::after {
+/* LONG LINE */
+.premium-heading::before {
   content: "";
-  @apply absolute left-0 -bottom-1 h-[2px] w-0
+  @apply absolute left-0 -bottom-1 h-[2px]
+  w-0
   bg-gradient-to-r
   from-[#FF0404]
   via-[#FF7878]
@@ -109,11 +112,111 @@ body {
   transition-all duration-500 ease-out;
 }
 
+/* SMALL LINE */
+.premium-heading::after {
+  content: "";
+  @apply absolute -bottom-1 h-[2px]
+  w-0
+  bg-gradient-to-r
+  from-[#FF0404]
+  via-[#FF7878]
+  to-[#CF0000]
+  transition-all duration-500 ease-out delay-75;
+  
+  left: 78%;
+}
+
+/* HOVER EFFECT */
+.premium-heading:hover::before {
+  width: 70%;
+}
+
 .premium-heading:hover::after {
-  @apply w-full;
+  width: 12%;
 }
 
 
 
+/* hero section */
 
+@layer components {
+
+  /* COMMON CONTENT */
+  .hero-content {
+    @apply relative z-20 w-full text-center lg:text-left;
+  }
+
+  /* COMMON HEADING */
+  .hero-heading {
+    @apply font-montserrat font-semibold;
+  }
+
+  /* COMMON PARAGRAPH */
+  .hero-paragraph {
+    @apply mt-5 text-gray-400 leading-relaxed;
+  }
+
+  /* FLOATING TAG */
+  .floating-tag {
+    @apply hidden md:flex absolute z-30
+    rounded-full border border-[#FFFFFF26]
+    bg-[#2E2E2E1A]
+    px-5 py-3 text-sm whitespace-nowrap text-white
+    backdrop-blur-[20px]
+    shadow-[0_0_25px_rgba(255,0,0,0.08)];
+  }
+
+  /* FEATURE ITEM */
+  .feature-item {
+    @apply flex w-fit items-center gap-2 rounded-full
+    border border-[#341111]
+    bg-[#120303]
+    px-4 py-2 transition hover:border-red-600;
+  }
+
+  /* FEATURE DOT */
+  .feature-dot {
+    @apply h-2 w-2 rounded-full
+    bg-gradient-to-r from-white via-red-500 to-red-700
+    shadow-[0_0_8px_rgba(255,0,0,0.6)];
+  }
+}
+
+@keyframes scanner {
+  0% {
+    transform: translateY(-220px);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(220px);
+    opacity: 0;
+  }
+}
+
+.animate-scanner {
+  animation: scanner 3s ease-in-out infinite alternate;
+}
+
+@keyframes textSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-textSweep {
+  animation: textSweep 2s ease-in-out infinite alternate;
+}
 

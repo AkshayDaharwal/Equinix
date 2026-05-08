@@ -7,7 +7,6 @@ const Navbar = () => {
 const [menuOpen, setMenuOpen] = useState(false);
 
 
-
   return (
     <header className="flex items-center justify-between px-6 md:px-10 lg:px-16 py-5 bg-black text-white relative">
 
@@ -29,17 +28,17 @@ const [menuOpen, setMenuOpen] = useState(false);
        <nav className="flex flex-col lg:flex-row gap-6 lg:gap-8 text-sm items-center">
 
           <div className="relative group">
-            <a className="text-red-500">Home</a>
-            <span className="absolute left-0 -bottom-2 w-full h-[2px] bg-red-500"></span>
+            <a className=" premium-heading text-gray-400">Home</a>
+            <span className="absolute left-0 -bottom-2 w-full h-[2px]"></span>
           </div>
 
           {["About Us", "Feature", "Why Choose Us"].map((item, i) => (
             <div key={i} className="relative group cursor-pointer">
-              <a className="text-gray-400 group-hover:text-white transition">
+              <a className="text-gray-400 font-montserrat  premium-heading transition">
                 {item}
               </a>
 
-              <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-2 w-0 h-[2px] transition-all duration-300 group-hover:w-full"></span>
             </div>
           ))}
 

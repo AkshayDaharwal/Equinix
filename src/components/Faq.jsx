@@ -1,15 +1,7 @@
-import { ChevronDown, ChevronUp } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import React, { useState, useEffect } from "react"
-import hand1 from "../assets/homepage/robots/hand_question.png"
-import hand4 from "../assets/homepage/robots/robot3.png"
-import hand2 from "../assets/homepage/robots/robot1.png"
-import hand3 from "../assets/homepage/robots/robot2.png"
-
-
-
-const images = [hand1, hand2, hand3, hand4]
-
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import hand1 from "../assets/homepage/robots/hand_question.png";
 
 const faqData = [
   {
@@ -27,51 +19,36 @@ const faqData = [
     answer:
       "Yes, Equinix infrastructure is built with enterprise-grade security and global connectivity standards.",
   },
-  
-]
+];
 
 const FAQSection = () => {
-
-
-const [activeImage, setActiveImage] = useState(0)
-
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  useEffect(() => {
-  const interval = setInterval(() => {
-    setActiveImage((prev) => (prev + 1) % images.length)
-  }, 2000)
-
-  return () => clearInterval(interval)
-}, [])
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFAQ = (index) => {
-    setActiveIndex(index === activeIndex ? null : index)
-  }
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      {/* Right Border */}
       <div className="absolute right-4 top-0 h-full w-[1px] bg-gray-800" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start min-h-[90vh]">
           {/* LEFT SECTION */}
           <div>
-            <h3 className="text-gradient-red text-[32px] font-mokoto uppercase  mb-4">
+            <h3 className="text-gradient-red text-[32px] font-mokoto uppercase mb-4">
               FAQ
             </h3>
 
-            <h1 className=" text-[55px] leading-[82px] tracking-[-2px] font-montserrat mb-12 uppercase whitespace-normal md:whitespace-nowrap">
+            <h1 className="text-[55px] leading-[82px] tracking-[-2px] font-montserrat mb-12 uppercase">
               Frequently Asked
               <br />
               Questions
             </h1>
 
-            {/* FAQ CARDS */}
             <div className="flex flex-col gap-6">
               {faqData.map((faq, index) => {
-                const isOpen = activeIndex === index
+                const isOpen = activeIndex === index;
 
                 return (
                   <motion.div
@@ -103,80 +80,78 @@ const [activeImage, setActiveImage] = useState(0)
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.35 }}
                         >
-                          <div className="px-8 pb-8 max-w-full md:max-w-[520px] text-gray-400 text-[14px] leading-8 font-montserrat">
+                          <div className="px-8 pb-8 text-gray-400 text-[14px] leading-8 font-montserrat max-w-[520px]">
                             {faq.answer}
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </motion.div>
-                )
+                );
               })}
             </div>
           </div>
 
           {/* RIGHT SECTION */}
-<div className="pt-12 relative">
-  <p className="text-gray-300 text-[15px] leading-8 max-w-full md:max-w-[520px] font-montserrat mb-10">
-    Equinix enables secure crypto, Web3, and DeFi operations with
-    high-performance infrastructure, low latency, connectivity,
-    enterprise security, and global interconnection trusted by
-    financial institutions worldwide.
-  </p>
+          <div className="pt-12 relative">
+            <p className="text-gray-300 text-[15px] leading-8 max-w-[520px] font-montserrat mb-10">
+              Equinix enables secure crypto, Web3, and DeFi operations with
+              high-performance infrastructure, low latency, connectivity,
+              enterprise security, and global interconnection trusted by
+              financial institutions worldwide.
+            </p>
 
-  {/* IMAGE SECTION */}
-  <div className="relative flex items-start gap-8">
-    
-    {/* ANIMATED DOTS */}
-    <div className="flex flex-col gap-4 mt-24">
-      {[0, 1, 2, 3].map((dot) => (
-        <motion.div
-          key={dot}
-          animate={
-            activeImage === dot
-              ? {
-                  scale: [1, 1.5, 1],
-                }
-              : {}
-          }
-          transition={{
-            duration: 0.8,
-            repeat: Infinity,
-          }}
-          className={`w-3 h-3 rounded-full border border-red-500 ${
-            activeImage === dot
-              ? "bg-red-500 shadow-[0_0_12px_red]"
-              : "bg-transparent"
-          }`}
-        />
-      ))}
-    </div>
+            <div className="flex items-start gap-8">
+              {/* DOTS (NOW ONLY 3 & CONTROLLED BY FAQ INDEX) */}
+              <div className="flex flex-col gap-4 justify-center mt-52 mr-6">
+                {[0, 1, 2].map((dot) => {
+                  const isActive = activeIndex === dot;
 
-    {/* IMAGE + TEXT */}
-    <div>
-      <motion.img
-        key={activeImage}
-        src={images[activeImage]}
-        alt="FAQ"
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7 }}
-        className="w-[320px] sm:w-[380px] md:w-[450px] h-auto max-w-full object-cover rounded-[8px]"
-      />
+                  return (
+                    <motion.div
+                      key={dot}
+                      animate={{
+                        scale: isActive ? [1, 1.4, 1] : 1,
+                      }}
+                      transition={{
+                        duration: 0.8,
+                        repeat: isActive ? Infinity : 0,
+                      }}
+                      className={`w-3 h-3 rounded-full border transition-all duration-300 ${
+                        isActive
+                         ? "bg-gradient-to-b from-[#FF0404] via-[#FF7878] to-[#CF0000] border-[#FF0404] "
+                         : "bg-transparent border-red-500"
+                      }`}
+                    />
+                  );
+                })}
+              </div>
 
-      <p className="mt-8 text-gray-300 text-[14px] leading-8 max-w-full md:max-w-[450px] font-montserrat">
-        Equinix powers crypto and Web3 with secure, high-performance
-        infrastructure, enabling blockchain deployment, DeFi
-        connectivity, and enterprise-grade interconnection trusted
-        globally by financial institutions and developers.
-      </p>
-    </div>
-  </div>
-</div>
+              {/* IMAGE (STATIC ONLY 1 IMAGE) */}
+              <div>
+                <div className="w-[320px] sm:w-[380px] mt-14 md:w-[450px] h-[300px] relative overflow-hidden rounded-[30px]">
+                  <motion.img
+                    src={hand1}
+                    alt="FAQ"
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.7 }}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                <p className=" text-gray-300 text-[14px] mt-6  leading-8 max-w-[450px] font-montserrat">
+                  Equinix powers crypto and Web3 with secure, high-performance
+                  infrastructure, enabling blockchain deployment, DeFi
+                  connectivity, and enterprise-grade interconnection.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FAQSection
+export default FAQSection;
