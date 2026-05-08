@@ -56,7 +56,7 @@ const commonParagraphClasses = `
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black text-white">
+    <section className="relative w-full overflow-hidden bg-black text-white">
       <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-14">
         {/* BACKGROUND TEXT */}
         <h1
