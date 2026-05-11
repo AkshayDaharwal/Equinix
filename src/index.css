@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-.btn-cut {
+/* .btn-cut {
   position: relative;
   padding: 6px 22px;
   font-size: 14px;
@@ -22,10 +22,10 @@ body {
   cursor: pointer;
 
   clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
-}
+} */
 
 /* GRADIENT BORDER */
-.btn-cut::before {
+/* .btn-cut::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -37,11 +37,121 @@ body {
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+} */
+
+/* .btn-cut:hover {
+  background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+} */
+
+
+.cyber-btn {
+  position: relative;
+  width: 140px;
+  height: 38px;
+
+  /* GRADIENT BORDER */
+  background: linear-gradient(
+    45deg,
+    #FF0404,
+    #FF7878,
+    #CF0000
+  );
+
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+
+  clip-path: polygon(
+    10px 0%,
+    100% 0%,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0% 100%,
+    0% 10px
+  );
+
+  transition: all 0.3s ease;
 }
 
-.btn-cut:hover {
-  background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+/* INNER BLACK AREA */
+.cyber-btn span {
+  width: 100%;
+  height: 100%;
+  background: #000;
+ background-image: linear-gradient(
+  45deg,
+  #FF0404,
+  #FF7878,
+  #CF0000
+);
+
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  clip-path: polygon(
+    10px 0%,
+    100% 0%,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0% 100%,
+    0% 10px
+  );
 }
+
+
+.cyber-btn span {
+  width: 100%;
+  height: 100%;
+  background: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  clip-path: polygon(
+    10px 0%,
+    100% 0%,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0% 100%,
+    0% 10px
+  );
+}
+
+/* ONLY TEXT GRADIENT */
+.cyber-btn span p {
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #FF0404,
+    #FF7878,
+    #CF0000
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* HOVER */
+/* .cyber-btn:hover span {
+  background: linear-gradient(
+    90deg,
+    #FF0404,
+    #FF7878,
+    #CF0000
+  );
+  -webkit-text-fill-color: black;
+} */
+
 
 @font-face {
   font-family: "Mokoto";

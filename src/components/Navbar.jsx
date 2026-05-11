@@ -45,10 +45,21 @@ const [menuOpen, setMenuOpen] = useState(false);
         </nav>
 
         {/* BUTTONS */}
-        <div className="flex flex-col lg:flex-row gap-3 w-full lg:w-auto items-center">
-          <button className="btn-cut">SIGN IN</button>
-          <button className="btn-cut">SIGN UP</button>
-        </div>
+      <div className="flex flex-col lg:flex-row gap-4 items-center">
+
+  <button className="cyber-btn font-montserrat font-semibold">
+  <span>
+    <p>SIGN IN</p>
+  </span>
+</button>
+
+  <button className="cyber-btn font-montserrat font-semibold">
+    <span>
+      <p>SIGN UP</p>
+    </span>
+  </button>
+
+</div>
 
       </div>
 

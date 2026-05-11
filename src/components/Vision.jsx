@@ -130,14 +130,14 @@ transition-all duration-700 ease-out"
             {/* ROADMAP */}
             <div className="relative ml-2">
               {/* Vertical Line */}
-              <div className="absolute left-[7px] top-3 bottom-3 w-[1px] bg-red-600" />
+              <div className="absolute left-[10px] top-3 bottom-3 w-[2px] bg-gradient-to-b from-[#000000] via-[#CF0000] to-[#000000]" />
 
               <div className="flex flex-col gap-14">
                 {roadmapItems.map((item, index) => (
                   <div key={index} className="flex items-center gap-6 relative">
                     {/* Dot */}
-                    <div className="relative z-10 w-4 h-4 rounded-full border border-red-500 flex items-center justify-center bg-black">
-                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#FF0404] via-[#FF7878] to-[#CF0000]" />
+                    <div className="relative z-10 w-6 h-6 rounded-full border border-red-500 flex items-center justify-center bg-black">
+                      <div className="w-3 h-3 rounded-full bg-gradient-to-r from-[#FF0404] via-[#FF7878] to-[#CF0000]" />
                     </div>
 
                     {/* Text */}

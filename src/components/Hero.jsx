@@ -162,8 +162,8 @@ const Hero = () => {
 
             <button
               className="
-                mt-8 border border-red-600 px-9 py-3 text-sm font-medium
-                transition hover:bg-red-600/10
+                mt-8 border cyber-btn font-montserrat font-semibold px-9 py-3 text-[13px]
+                transition
 
                 max-[1024px]:px-7
                 max-[1024px]:py-2.5
@@ -175,7 +175,9 @@ const Hero = () => {
                 max-[480px]:px-6
               "
             >
-              JOIN NOW
+                <span>
+    <p>JOIN NOW</p>
+  </span>
             </button>
           </div>
 
