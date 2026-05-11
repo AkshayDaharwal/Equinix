@@ -339,12 +339,12 @@ const FutureVision = () => {
               "
             >
               {/* Vertical Line */}
-<div
-  className="
-    absolute left-[7px] top-3 bottom-3
-    w-[1px] bg-red-600
+              <div
+                className="
+    absolute left-[10px] top-3 bottom-3
+    w-[2px] bg-gradient-to-b from-[#000000] via-[#CF0000] to-[#000000]
   "
-/>
+              />
               <div
                 className="
                   flex flex-col gap-14
@@ -356,15 +356,15 @@ const FutureVision = () => {
               >
                 {roadmapItems.map((item, index) => (
                   <div
-  key={index}
-  className="
+                    key={index}
+                    className="
     relative flex items-center gap-6
 
     max-[1024px]:gap-5
 
     max-[550px]:gap-4
   "
->
+                  >
                     {/* Dot */}
                     <div
                       className="
@@ -372,15 +372,15 @@ const FutureVision = () => {
                         flex items-center justify-center
                         rounded-full border border-red-500 bg-black
 
-                        h-4 w-4
+                        h-6 w-6
                       "
                     >
-                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#FF0404] via-[#FF7878] to-[#CF0000]" />
+                      <div className="h-3 w-3 rounded-full bg-gradient-to-r from-[#FF0404] via-[#FF7878] to-[#CF0000]" />
                     </div>
 
                     {/* Text */}
                     <p
-  className="
+                      className="
     font-montserrat text-gray-400
 
     text-[20px] leading-8
@@ -393,10 +393,9 @@ const FutureVision = () => {
     max-[550px]:text-[14px]
     max-[550px]:leading-6
   "
->
-  {item}
-</p>
-                      
+                    >
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
