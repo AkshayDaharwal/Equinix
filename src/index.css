@@ -180,6 +180,10 @@ body {
     bg-gradient-to-r from-white via-red-500 to-red-700
     shadow-[0_0_8px_rgba(255,0,0,0.6)];
   }
+  /* FEATURE TEXT */
+  .feature-text {
+    @apply text-[16px] text-gray-200 sm:text-sm;
+  }
 }
 
 @keyframes scanner {
@@ -205,6 +209,7 @@ body {
 .animate-scanner {
   animation: scanner 3s ease-in-out infinite alternate;
 }
+
 
 @keyframes textSweep {
   0% {
