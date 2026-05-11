@@ -8,7 +8,7 @@ const IndustriesSection = () => {
   return (
     <section
   className="
-    bg-black text-white
+    bg-black text-white overflow-hidden
     px-10 py-16
     flex justify-between items-start
 
@@ -140,6 +140,8 @@ const IndustriesSection = () => {
               ease: "easeInOut",
             }}
             className="absolute w-[420px] h-[420px]
+    max-[768px]:w-[320px] max-[768px]:h-[320px]
+    max-[550px]:w-[240px] max-[550px]:h-[240px]
     bg-red-600/20 rounded-full blur-[100px]"
           />
 
@@ -152,6 +154,8 @@ const IndustriesSection = () => {
               ease: "linear",
             }}
             className="absolute w-[530px] h-[530px]
+    max-[768px]:w-[340px] max-[768px]:h-[340px]
+    max-[550px]:w-[260px] max-[550px]:h-[260px]
     rounded-[30px]
     border border-red-500/30
     border-dashed"
@@ -170,6 +174,8 @@ const IndustriesSection = () => {
             }}
             className="absolute z-20
     w-[480px] h-[4px]
+    max-[768px]:w-[320px]
+    max-[550px]:w-[240px]
     bg-gradient-to-r
     from-transparent
     via-red-500
@@ -183,6 +189,8 @@ const IndustriesSection = () => {
             alt="AI Hand"
             className="relative z-10
     w-[500px] h-[500px]
+    max-[768px]:w-[320px] max-[768px]:h-[320px]
+    max-[550px]:w-[240px] max-[550px]:h-[240px]
     rounded-xl
     object-cover
     border border-red-500/20
