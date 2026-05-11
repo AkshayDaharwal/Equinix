@@ -90,7 +90,7 @@ const FeatureCard = ({ title }) => {
         <p
           className="
             whitespace-pre-line px-3
-            font-montserrat text-white
+            font-['Montserrat'] text-white
 
             text-[14px] leading-6
 
@@ -175,7 +175,7 @@ const EquinixAIDefiProgram = () => {
 
             <h1
               className="
-                font-montserrat tracking-[-2px]
+                font-['Montserrat'] tracking-[-2px]
 
                 mb-10 text-7xl leading-[86px]
 
@@ -200,7 +200,7 @@ const EquinixAIDefiProgram = () => {
 
             <p
               className="
-                font-montserrat text-gray-300
+                font-['Montserrat'] text-gray-300
 
                 mb-12 max-w-[520px]
                 text-[16px] leading-9
@@ -224,7 +224,7 @@ const EquinixAIDefiProgram = () => {
 
             <p
               className="
-                font-montserrat text-gray-300
+                font-['Montserrat'] text-gray-300
 
                 max-w-[620px]
                 text-[16px] leading-9
@@ -243,7 +243,7 @@ const EquinixAIDefiProgram = () => {
               Our AI layer ensures fair distribution, performance tracking, and
               optimized growth, making the system both scalable and transparent.
               <br />
-              <span className="font-montserrat text-white">
+              <span className="font-['Montserrat'] text-white">
                 This is not just DeFi — it’s a hybrid model of AI + Network
                 Economy + Blockchain automation.
               </span>
@@ -260,7 +260,7 @@ const EquinixAIDefiProgram = () => {
           >
             <h2
               className="
-                self-start font-montserrat text-white
+                self-start font-['Montserrat'] text-white
 
                 ml-8 mb-12 text-[40px]
 

@@ -270,7 +270,7 @@ const FutureVision = () => {
 
             <h1
               className="
-                font-montserrat tracking-[-2px]
+                font-['Montserrat'] tracking-[-2px]
 
                 mb-8 text-[72px] leading-[82px]
 
@@ -293,7 +293,7 @@ const FutureVision = () => {
 
             <p
               className="
-                font-montserrat text-gray-300
+                font-['Montserrat'] text-gray-300
 
                 mb-6 max-w-[500px]
                 text-[15px] leading-8
@@ -314,7 +314,7 @@ const FutureVision = () => {
 
             <p
               className="
-                font-montserrat text-gray-400
+                font-['Montserrat'] text-gray-400
 
                 mb-14 text-[15px] leading-8
 
@@ -381,7 +381,7 @@ const FutureVision = () => {
                     {/* Text */}
                     <p
                       className="
-    font-montserrat text-gray-400
+    font-['Montserrat'] text-gray-400
 
     text-[20px] leading-8
 

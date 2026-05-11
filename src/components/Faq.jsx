@@ -86,7 +86,7 @@ const FAQSection = () => {
 
             <h1
               className="
-                font-montserrat uppercase tracking-[-2px]
+                font-['Montserrat'] uppercase tracking-[-2px]
 
                 mb-12 text-[55px] leading-[82px]
 
@@ -157,7 +157,7 @@ const FAQSection = () => {
                     >
                       <span
                         className="
-                          font-montserrat text-gray-200
+                          font-['Montserrat'] text-gray-200
 
                           text-[18px]
 
@@ -209,7 +209,7 @@ const FAQSection = () => {
                           <div
                             className="
                               max-w-[520px]
-                              font-montserrat text-gray-400
+                              font-['Montserrat'] text-gray-400
 
                               px-8 pb-8
                               text-[14px] leading-8
@@ -256,7 +256,7 @@ const FAQSection = () => {
             <p
               className="
                 max-w-[520px]
-                font-montserrat text-gray-300
+                font-['Montserrat'] text-gray-300
 
                 mb-10 text-[15px] leading-8
 
@@ -375,7 +375,7 @@ const FAQSection = () => {
                 <p
                   className="
                     mt-6 max-w-[450px]
-                    font-montserrat text-gray-300
+                    font-['Montserrat'] text-gray-300
 
                     text-[14px] leading-8
 

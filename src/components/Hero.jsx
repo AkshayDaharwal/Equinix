@@ -56,7 +56,7 @@ const commonParagraphClasses = `
 
 const Hero = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-black text-white">
+    <section className="relative w-full overflow-hidden bg-black text-white ">
       <div className="relative z-10 mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-14">
         {/* BACKGROUND TEXT */}
         <h1
@@ -139,7 +139,7 @@ const Hero = () => {
               `}
             >
               Future-Ready <br />
-              <span className="text-[#ff1d1d]">Crypto</span>
+              <span className="text-gradient-red">Crypto</span>
               <br />
               Infrastructure
             </h2>
@@ -163,22 +163,15 @@ const Hero = () => {
 
             <button
               className="
-                mt-8 border cyber-btn font-montserrat font-semibold px-9 py-3 text-[13px]
-                transition
-
-                max-[1024px]:px-7
-                max-[1024px]:py-2.5
-
-                max-[996px]:px-5
-                max-[996px]:py-2
-                max-[996px]:text-[12px]
-
-                max-[480px]:px-6
+                    mt-8 cyber-btn
+    font-montserrat font-semibold
+    text-[13px]
+    transition
               "
             >
-                <span>
-    <p>JOIN NOW</p>
-  </span>
+              <span>
+                <p>JOIN NOW</p>
+              </span>
             </button>
           </div>
 
@@ -222,8 +215,8 @@ const Hero = () => {
                 "
               />
               {/* RED SCANNER */}
-<div
-  className="
+              <div
+                className="
     absolute z-30
     h-[20px] w-full
 
@@ -236,7 +229,7 @@ const Hero = () => {
     animate-scanner shadow-[0_0_9px_rgba(255,0,0,0.4)]
     pointer-events-none
   "
-></div>
+              ></div>
 
               {/* FLOATING TAGS */}
               {floatingTags.map((tag, index) => (
@@ -292,7 +285,7 @@ const Hero = () => {
                 max-[480px]:text-[28px]
               `}
             >
-              A <span className="text-[#ff1d1d]">Smarter</span> Way to
+              A <span className="text-gradient-red">Smarter</span> Way to
               <br />
               Earn in Web3
             </h2>
@@ -327,6 +320,11 @@ const Hero = () => {
                   key={item}
                   className="
                     feature-item
+  w-[320px]
+
+  max-[1024px]:w-[280px]
+  max-[768px]:w-full
+
   max-[1024px]:px-3
   max-[1024px]:py-2
   max-[996px]:py-1.5
@@ -336,11 +334,11 @@ const Hero = () => {
                 >
                   <span
                     className="
-                     feature-dot
+                     feature-dot 
                     "
                   />
 
-                  <span className="text-[16px] text-gray-200 sm:text-sm max-[996px]:text-[12px]">
+                  <span className="text-[18px] text-gray-300  max-[996px]:text-[12px]">
                     {item}
                   </span>
                 </div>

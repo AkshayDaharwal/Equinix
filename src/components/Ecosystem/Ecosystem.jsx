@@ -1,16 +1,18 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const ecosystemCards = [
   {
     title: "Network Rewards System",
+    
     points: [
       "Direct referral rewards",
       "Team growth incentives",
       "Level-based earning system",
     ],
     className: `
-      top-[130px] right-[40px]
+      top-[130px] right-[30px]
 
       max-[1200px]:top-[110px]
       max-[1200px]:right-[0px]
@@ -31,7 +33,7 @@ const ecosystemCards = [
       "Smart contract-based earnings",
     ],
     className: `
-      top-[210px] left-[-60px]
+      top-[210px] left-[-80px]
 
       max-[1200px]:top-[210px]
       max-[1200px]:left-[0px]
@@ -54,7 +56,7 @@ const ecosystemCards = [
       "AI-powered optimization",
     ],
     className: `
-      top-[300px] right-[20px]
+      top-[300px] right-[30px]
 
       max-[1200px]:top-[300px]
       max-[1200px]:right-[-10px]
@@ -73,7 +75,7 @@ const ecosystemCards = [
     description:
       "Seamless connectivity across exchanges, wallets, and blockchain networks.",
     className: `
-      bottom-[10px] left-[-60px]
+      bottom-[10px] left-[-80px]
 
       max-[1200px]:bottom-[10px]
       max-[1200px]:left-[0px]
@@ -127,7 +129,7 @@ const Ecosystem = () => {
           <p
             className="
               mb-6 font-['Mokoto'] uppercase tracking-[4px]
-              text-red-500
+              text-gradient-red
 
               text-4xl
 
@@ -142,7 +144,7 @@ const Ecosystem = () => {
           {/* HEADING */}
           <h1
             className="
-              mb-8 font-montserrat text-white
+              mb-8 font-['Montserrat'] text-white
 
               text-[60px] leading-[70px]
 
@@ -163,6 +165,7 @@ const Ecosystem = () => {
           </h1>
 
           {/* CONTENT ROW */}
+
           <div
             className="
               flex items-start gap-8
@@ -194,23 +197,138 @@ const Ecosystem = () => {
 
             <button
               className="
-                mt-14 flex h-[56px] min-w-[56px]
-                items-center justify-center rounded-full
-                border border-red-500 text-red-500
-                transition hover:bg-red-500 hover:text-white
+    mt-14
+    relative top-16 -left-28
+    max-[768px]:mt-0 
 
-                max-[768px]:mt-0
-              "
+    flex h-[56px] min-w-[56px]
+    items-center justify-center
+    rounded-full
+
+    bg-[linear-gradient(90deg,#FF0404,#FF7878,#CF0000)]
+    p-[1px]
+  "
             >
-              →
+              <div
+                className="
+      flex h-full w-full
+      items-center justify-center
+      rounded-full bg-black
+    "
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="arrowGradient2"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stopColor="#FF0404" />
+                      <stop offset="50%" stopColor="#FF7878" />
+                      <stop offset="100%" stopColor="#CF0000" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    d="M7 17L17 7"
+                    stroke="url(#arrowGradient2)"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+
+                  <path
+                    d="M9 7H17V15"
+                    stroke="url(#arrowGradient2)"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
+            {/* <button
+  className="
+    flex h-[56px] min-w-[56px]
+    items-center justify-center rounded-full
+    border border-red-500 text-red-500 
+    transition hover:bg-red-500  hover:text-white
+     relative right-20 -top-5 
+  "
+>
+  <ArrowRight size={38} strokeWidth={1.2} className="rotate-[25deg]" />
+</button> */}
+            <button
+              className="
+    relative right-20 -top-5
+
+    flex h-[56px] min-w-[56px]
+    items-center justify-center
+    rounded-full
+
+    bg-[linear-gradient(90deg,#FF0404,#FF7878,#CF0000)]
+    p-[1px]
+  "
+            >
+              <div
+                className="
+      flex h-full w-full
+      items-center justify-center
+      rounded-full bg-black
+    "
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="rotate-[70deg]"
+                >
+                  <defs>
+                    <linearGradient
+                      id="arrowGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stopColor="#FF0404" />
+                      <stop offset="50%" stopColor="#FF7878" />
+                      <stop offset="100%" stopColor="#CF0000" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    d="M7 17L17 7"
+                    stroke="url(#arrowGradient)"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                  />
+
+                  <path
+                    d="M9 7H17V15"
+                    stroke="url(#arrowGradient)"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
             </button>
           </div>
         </div>
 
-       
-{/* DESKTOP FLOATING CARDS */}
-<div
-  className="
+        {/* DESKTOP FLOATING CARDS */}
+        <div
+          className="
     relative hidden w-full xl:block
 
     h-[560px]
@@ -219,58 +337,66 @@ const Ecosystem = () => {
 
     max-[1400px]:translate-x-[40px]
   "
->
-  {ecosystemCards.map((card, index) => (
-    <motion.div
-      key={index}
-      animate={card.animation}
-      transition={{
-        duration: 4 + index,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-      style={{
-        willChange: "transform",
-        transform: "translateZ(0)",
-      }}
-      className={`
-        absolute z-30 flex flex-col
-        justify-center rounded-[80px]
-        border border-red-600 bg-black
-        px-10 py-6 text-left
-        backdrop-blur-sm
-
-        w-[350px] h-[170px]
-
-        ${card.className}
-      `}
-    >
-      <h3
-        className="
-          mb-2 font-montserrat text-[20px] text-white
-        "
-      >
-        {card.title}
-      </h3>
-
-      {card.points ? (
-        <ul className="text-[15px] leading-5 text-gray-400">
-          {card.points.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-[15px] leading-5 text-gray-400">
-          {card.description}
-        </p>
-      )}
-    </motion.div>
-  ))}
+        >
+       
+  <div className="absolute inset-0 z-0">
+  {/* slow glowing fire layers */}
+  <div className="absolute top-[20%] left-[10%] h-[300px] w-[300px] bg-red-600/20 blur-[120px] animate-pulse" />
+  
+  <div className="absolute top-[60%] right-[10%] h-[250px] w-[250px] bg-orange-500/20 blur-[140px] animate-pulse" />
+  
+  <div className="absolute bottom-[10%] left-[40%] h-[220px] w-[220px] bg-red-700/20 blur-[130px] animate-pulse" />
 </div>
-        
-       {/* TABLET + MOBILE RESPONSIVE CARDS */}
-<div
-  className="
+
+          {ecosystemCards.map((card, index) => (
+            <div
+              key={index}
+              
+              style={{
+                willChange: "transform",
+                transform: "translateZ(0)",
+              }}
+              className={`
+         absolute z-30 flex flex-col
+  justify-center rounded-[80px]
+  border border-red-600 bg-black
+  px-10 py-6 text-left
+  backdrop-blur-sm
+
+  w-[350px] h-[170px]
+
+  ${card.className}
+    shadow-[0_0_30px_rgba(255,0,0,0.15)]
+
+       
+      `}
+            >
+              <h3
+                className="
+          mb-2 font-['Montserrat'] text-[20px] text-white
+        "
+              >
+                {card.title}
+              </h3>
+
+              {card.points ? (
+                <ul className="text-[15px] leading-5 text-gray-400 justify-items-center">
+                  {card.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-[15px] leading-5 text-gray-400">
+                  {card.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* TABLET + MOBILE RESPONSIVE CARDS */}
+        <div
+          className="
     hidden w-full
 
     xl:hidden
@@ -285,61 +411,42 @@ const Ecosystem = () => {
 
     max-[992px]:gap-4
   "
+        >
+          {ecosystemCards.map((card, index) => (
+            <div
+  key={index}
+  className={`
+
++ shadow-[0_0_40px_rgba(255,0,0,0.25)]
++ relative overflow-hidden
++ before:content-[''] before:absolute before:inset-0
++ before:rounded-[80px]
++ before:bg-[radial-gradient(circle_at_30%_20%,rgba(255,0,0,0.25),transparent_60%)]
++ before:opacity-70
+     flex flex-col justify-start   rounded-[34px]   border border-red-600  
+      bg-black   backdrop-blur-sm    text-left    px-8 py-5    min-h-[150px]   
+       max-[1100px]:px-6   max-[1100px]:py-4   max-[1100px]:min-h-[135px]    max-[992px]:px-5  
+        max-[992px]:py-4   max-[992px]:min-h-[125px]    max-[768px]:text-center   max-[768px]:min-h-auto 
+          max-[768px]:px-6   max-[768px]:py-6
+    ${card.className}
+  `}
 >
-  {ecosystemCards.map((card, index) => (
-    <motion.div
-      key={index}
-      animate={{
-        y: [0, -4, 0],
-      }}
-      transition={{
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-      className="
-  flex flex-col justify-start
-  rounded-[34px]
-  border border-red-600
-  bg-black
-  backdrop-blur-sm
-
-  text-left
-
-  px-8 py-5
-
-  min-h-[150px]
-
-  max-[1100px]:px-6
-  max-[1100px]:py-4
-  max-[1100px]:min-h-[135px]
-
-  max-[992px]:px-5
-  max-[992px]:py-4
-  max-[992px]:min-h-[125px]
-
-  max-[768px]:text-center
-  max-[768px]:min-h-auto
-  max-[768px]:px-6
-  max-[768px]:py-6
-"
-    >
-      <h3
-        className="
-  mb-3 font-montserrat
+              <h3
+                className="
+  mb-3 font-['Montserrat']
   text-[22px] leading-[1.2] text-white
 
   max-[1100px]:text-[19px]
 
   max-[992px]:text-[16px]
 "
-      >
-        {card.title}
-      </h3>
+              >
+                {card.title}
+              </h3>
 
-      {card.points ? (
-        <ul
-          className="
+              {card.points ? (
+                <ul
+                  className="
             space-y-1.5 text-gray-400
 
             text-[15px] leading-6
@@ -347,14 +454,14 @@ const Ecosystem = () => {
             max-[992px]:text-[12px]
             max-[992px]:leading-5
           "
-        >
-          {card.points.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
-        </ul>
-      ) : (
-        <p
-          className="
+                >
+                  {card.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p
+                  className="
             text-gray-400
 
             text-[15px] leading-6
@@ -365,13 +472,13 @@ max-[1100px]:leading-5
 max-[992px]:text-[11px]
 max-[992px]:leading-4
           "
-        >
-          {card.description}
-        </p>
-      )}
-    </motion.div>
-  ))}
-</div>
+                >
+                  {card.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -17,7 +17,8 @@ export default {
     extend: {
       fontFamily: {
         mokoto: ["Mokoto", "sans-serif"],
-        // montserrat: ["Montserrat", "sans-serif"],
+       
+          // montserrat: ["Montserrat", "sans-serif"],
         // oxanium: ["Oxanium", "sans-serif"],
         // inter: ["Inter", "sans-serif"],
       },

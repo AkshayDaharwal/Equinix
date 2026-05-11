@@ -28,7 +28,7 @@
 //               className="w-[140px] sm:w-[160px] md:w-[180px] cursor-pointer object-contain mb-5 max-w-full"
 //             />
 
-//             <p className="text-[#909090] text-blur text-[13px] leading-6 font-montserrat max-w-full md:max-w-[220px]">
+//             <p className="text-[#909090] text-blur text-[13px] leading-6 font-['Montserrat'] max-w-full md:max-w-[220px]">
 //               Next-generation crypto infrastructure for a decentralized world
 //             </p>
 //           </div>
@@ -46,7 +46,7 @@
 //                     key={i}
 //                     whileHover={{ x: 6 }}
 //                     transition={{ duration: 0.25 }}
-//                     className="cursor-pointer text-[14px] font-montserrat w-fit relative"
+//                     className="cursor-pointer text-[14px] font-['Montserrat'] w-fit relative"
 //                   >
 //                     <span className="relative group inline-block">
 //                       {/* NORMAL TEXT */}
@@ -77,7 +77,7 @@
 
 //         {/* COPYRIGHT */}
 //         <div className="text-center">
-//           <p className="text-gray-400 text-[16px] font-montserrat tracking-wide">
+//           <p className="text-gray-400 text-[16px] font-['Montserrat'] tracking-wide">
 //             © 2026 Equinix AI. All rights reserved. Built on enterprise-grade
 //             infrastructure.
 //           </p>
@@ -177,7 +177,7 @@ const Footer = () => {
 
             <p
               className="
-                text-blur font-montserrat text-[#909090]
+                text-blur font-['Montserrat'] text-[#909090]
 
                 max-w-[220px]
                 text-[13px] leading-6
@@ -240,7 +240,7 @@ const Footer = () => {
                     transition={{ duration: 0.25 }}
                     className="
                       relative w-fit cursor-pointer
-                      font-montserrat
+                      font-['Montserrat']
 
                       text-[14px]
 
@@ -300,7 +300,7 @@ const Footer = () => {
         <div className="text-center">
           <p
             className="
-              font-montserrat tracking-wide text-gray-400
+              font-['Montserrat'] tracking-wide text-gray-400
 
               text-[16px]
 

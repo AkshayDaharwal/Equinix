@@ -128,25 +128,27 @@ const AboutSection = () => {
         >
           {/* TOP TEXT */}
           <div>
-            <p
-              className="
-                bg-clip-text uppercase tracking-[4px]
-                text-transparent text-gradient-red font-['Mokoto']
+            <section id="about">
+  
+  <p
+    className="
+      bg-clip-text uppercase tracking-[4px]
+      text-transparent text-gradient-red font-['Mokoto']
 
-                text-4xl
+      text-4xl
+      max-[1200px]:text-3xl
+      max-[992px]:text-2xl
+      max-[768px]:text-2xl
+    "
+  >
+    ABOUT US
+  </p>
 
-                max-[1200px]:text-3xl
-                max-[992px]:text-2xl
-
-                max-[768px]:text-2xl
-              "
-            >
-              ABOUT US
-            </p>
+</section>
 
             <h2
               className="
-                mt-2 font-montserrat leading-tight
+                mt-2 font-['Montserrat'] leading-tight
 
                 text-6xl
 
@@ -174,7 +176,7 @@ const AboutSection = () => {
 
             <p
               className="
-                max-w-[400px] font-montserrat
+                max-w-[400px] font-['Montserrat']
                 leading-relaxed text-gray-400
 
                 text-sm
@@ -195,7 +197,7 @@ const AboutSection = () => {
           <div className="flex flex-col gap-3">
             <h3
               className="
-                font-montserrat font-semibold
+                font-['Montserrat'] font-semibold
 
                 text-xl
 
@@ -207,7 +209,7 @@ const AboutSection = () => {
 
             <p
               className="
-                font-montserrat text-gray-400
+                font-['Montserrat'] text-gray-400
 
                 text-sm
 
@@ -235,7 +237,7 @@ const AboutSection = () => {
 
             <ul
               className="
-                space-y-2 font-montserrat text-gray-400
+                space-y-2 font-['Montserrat'] text-gray-400
 
                 text-sm
 
@@ -266,7 +268,7 @@ const AboutSection = () => {
           <div className="relative w-1/2 flex-1 max-[768px]:w-full">
             <h3
               className="
-                font-montserrat font-semibold tracking-wide
+                font-['Montserrat'] font-semibold tracking-wide
 
                 text-[30px]
 
@@ -280,7 +282,7 @@ const AboutSection = () => {
 
             <p
               className="
-                mt-2 font-montserrat font-bold text-gray-300
+                mt-2 font-['Montserrat'] font-bold text-gray-300
 
                 text-[16px]
 
@@ -302,7 +304,7 @@ const AboutSection = () => {
           >
             <p
               className="
-                font-montserrat leading-relaxed text-gray-400
+                font-['Montserrat'] leading-relaxed text-gray-400
 
                 text-sm
 
@@ -319,8 +321,8 @@ const AboutSection = () => {
         {/* CARDS */}
         <div
           className="
-            flex flex-wrap gap-40
-
+            flex flex-wrap gap-10
+              justify-center
             max-[1200px]:gap-20
             max-[992px]:gap-14
 

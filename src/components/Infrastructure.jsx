@@ -44,7 +44,8 @@ const EquinixBlockchainPage = () => {
             max-[1024px]:text-center
           "
         >
-          <h2
+         <section id="whychoose">
+           <h2
             className="
               text-gradient-red font-['Mokoto'] uppercase tracking-wide
               text-[#ff2b2b]
@@ -60,6 +61,7 @@ const EquinixBlockchainPage = () => {
           >
             EQUINIX INFRA
           </h2>
+         </section>
 
           <div
             className="
@@ -70,7 +72,7 @@ const EquinixBlockchainPage = () => {
           >
             <h1
               className="
-                font-montserrat
+                font-['Montserrat']
 
                 text-7xl
 
@@ -88,7 +90,7 @@ const EquinixBlockchainPage = () => {
 
             <h1
               className="
-                mt-2 font-montserrat
+                mt-2 font-['Montserrat']
 
                 text-7xl
 
@@ -123,7 +125,7 @@ const EquinixBlockchainPage = () => {
             className="
               absolute right-0 top-[-50px]
               max-w-md
-              font-montserrat font-light
+              font-['Montserrat'] font-light
               text-[15px] leading-7 text-gray-300
 
               max-[1024px]:static
@@ -232,7 +234,7 @@ const EquinixBlockchainPage = () => {
                 min-h-[64px] w-[360px]
                 items-center justify-center
                 border border-gray-500 bg-black/20
-                px-9 py-3 text-center font-montserrat
+                px-9 py-3 text-center font-['Montserrat']
                 text-[15px] leading-7 text-gray-100
                 backdrop-blur-sm min-[1025px]:flex
 
@@ -258,7 +260,7 @@ const EquinixBlockchainPage = () => {
                 min-h-[64px] w-[360px]
                 items-center justify-center
                 border border-gray-500 bg-black/20
-                px-9 py-3 text-center font-montserrat
+                px-9 py-3 text-center font-['Montserrat']
                 text-[15px] leading-7 text-gray-100
                 backdrop-blur-sm min-[1025px]:flex
 
@@ -284,7 +286,7 @@ const EquinixBlockchainPage = () => {
                 min-h-[72px] w-[360px]
                 items-center justify-center
                 border border-gray-500 bg-black/20
-                px-8 py-3 text-center font-montserrat
+                px-8 py-3 text-center font-['Montserrat']
                 text-[15px] leading-7 text-gray-100
                 backdrop-blur-sm min-[1025px]:flex
 
@@ -310,7 +312,7 @@ const EquinixBlockchainPage = () => {
                 min-h-[72px] w-[360px]
                 items-center justify-center
                 border border-gray-500 bg-black/20
-                px-8 py-3 text-center font-montserrat
+                px-8 py-3 text-center font-['Montserrat']
                 text-[15px] leading-7 text-gray-100
                 backdrop-blur-sm min-[1025px]:flex
 
@@ -353,7 +355,7 @@ const EquinixBlockchainPage = () => {
       className="
         rounded-2xl border border-gray-500
         bg-black/20 px-6 py-6
-        text-center font-montserrat
+        text-center font-['Montserrat']
         text-sm leading-7 text-gray-100
         backdrop-blur-sm
 
@@ -374,7 +376,7 @@ const EquinixBlockchainPage = () => {
             className="
               absolute bottom-0 left-[-50px]
               mb-[-40px] w-[700px]
-              font-montserrat
+              font-['Montserrat']
               text-[15px] leading-8 text-gray-400
 
               max-[1024px]:static

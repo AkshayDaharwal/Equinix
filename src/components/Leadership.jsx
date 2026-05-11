@@ -62,10 +62,7 @@ const Leadership = () => {
       >
         <p
           className="
-            font-['Mokoto'] tracking-widest
-            text-gradient-red mb-2
-
-            text-3xl
+            font-['Mokoto'] dservice text-3xl mb-2 tracking-widest
 
             max-[1024px]:text-2xl
 
@@ -79,7 +76,7 @@ const Leadership = () => {
 
         <h2
           className="
-            font-montserrat text-white
+            font-['Montserrat'] text-white
 
             text-6xl
 
@@ -126,7 +123,7 @@ const Leadership = () => {
               [transform-style:preserve-3d]
 
               flex flex-col justify-between
-              text-center font-montserrat
+              text-center font-['Montserrat']
               backdrop-blur-xl
 
               rounded-2xl
@@ -217,7 +214,7 @@ const Leadership = () => {
             <h3
               className={`
                 mt-2 mb-1
-                font-montserrat font-semibold
+                font-['Montserrat'] font-semibold
                 leading-tight
 
                 text-2xl
@@ -242,7 +239,7 @@ const Leadership = () => {
             <p
               className="
                 mb-6
-                font-montserrat font-semibold
+                font-['Montserrat'] font-semibold
                 leading-tight
 
                 text-2xl
@@ -322,7 +319,7 @@ const Leadership = () => {
         className="
           relative z-10
           mt-12 text-center
-          font-montserrat italic text-white
+          font-['Montserrat'] italic text-white
 
           text-3xl
 
