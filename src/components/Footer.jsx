@@ -36,7 +36,7 @@
 //           {/* FOOTER LINKS */}
 //           {Object.entries(footerLinks).map(([title, links], index) => (
 //             <div key={index}>
-//               <h3 className="text-gradient-red cursor-pointer hover:opacity-80 font-mokoto uppercase text-[20px] tracking-wide  mb-6 ">
+//               <h3 className="text-gradient-red cursor-pointer hover:opacity-80 font-['Mokoto'] uppercase text-[20px] tracking-wide  mb-6 ">
 //                 {title}
 //               </h3>
 
@@ -207,7 +207,7 @@ const Footer = () => {
               <h3
                 className="
                   text-gradient-red cursor-pointer
-                  font-mokoto uppercase tracking-wide
+                  font-['Mokoto'] uppercase tracking-wide
                   hover:opacity-80
 
                   mb-6 text-[20px]

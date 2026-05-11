@@ -119,7 +119,7 @@ const IndustriesSection = () => {
     max-[996px]:text-center
   "
 >
-        <p className="font-mokoto text-gradient-red text-3xl mb-2 tracking-widest">
+        <p className="font-['Mokoto'] text-gradient-red text-3xl mb-2 tracking-widest">
           SERVICES
         </p>
 

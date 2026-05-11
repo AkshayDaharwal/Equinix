@@ -131,7 +131,7 @@ const AboutSection = () => {
             <p
               className="
                 bg-clip-text uppercase tracking-[4px]
-                text-transparent text-gradient-red font-mokoto
+                text-transparent text-gradient-red font-['Mokoto']
 
                 text-4xl
 

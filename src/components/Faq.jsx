@@ -69,7 +69,7 @@ const FAQSection = () => {
           <div className="max-[768px]:text-center">
             <h3
               className="
-                text-gradient-red font-mokoto uppercase
+                text-gradient-red font-['Mokoto'] uppercase
 
                 mb-4 text-[32px]
 

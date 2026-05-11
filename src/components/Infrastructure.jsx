@@ -46,7 +46,7 @@ const EquinixBlockchainPage = () => {
         >
           <h2
             className="
-              text-gradient-red font-mokoto uppercase tracking-wide
+              text-gradient-red font-['Mokoto'] uppercase tracking-wide
               text-[#ff2b2b]
 
               text-4xl

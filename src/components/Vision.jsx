@@ -252,7 +252,7 @@ const FutureVision = () => {
           >
             <h3
               className="
-                text-gradient-red font-mokoto uppercase tracking-wide
+                text-gradient-red font-['Mokoto'] uppercase tracking-wide
 
                 mb-4 text-[36px]
 

@@ -126,7 +126,7 @@ const Ecosystem = () => {
           {/* LABEL */}
           <p
             className="
-              mb-6 font-mokoto uppercase tracking-[4px]
+              mb-6 font-['Mokoto'] uppercase tracking-[4px]
               text-red-500
 
               text-4xl

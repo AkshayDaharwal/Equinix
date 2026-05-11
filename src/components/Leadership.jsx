@@ -62,7 +62,7 @@ const Leadership = () => {
       >
         <p
           className="
-            font-mokoto tracking-widest
+            font-['Mokoto'] tracking-widest
             text-gradient-red mb-2
 
             text-3xl

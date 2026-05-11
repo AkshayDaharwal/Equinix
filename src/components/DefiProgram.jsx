@@ -159,7 +159,7 @@ const EquinixAIDefiProgram = () => {
           >
             <h3
               className="
-                text-gradient-red font-mokoto leading-none
+                text-gradient-red font-['Mokoto'] leading-none
 
                 mb-3 text-[34px]
 
