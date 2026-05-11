@@ -89,9 +89,10 @@ const Hero = () => {
         {/* HERO LAYOUT */}
         <div
           className="
-            relative flex min-h-[900px] items-start justify-between gap-8 xl:gap-0
+            relative flex min-h-[760px] items-start justify-between gap-8 xl:gap-0
 
-            max-[996px]:min-h-[760px]
+            max-[1024px]:min-h-[680px]
+            max-[996px]:min-h-[680px]
             max-[996px]:gap-4
 
             max-[768px]:min-h-auto
@@ -100,7 +101,7 @@ const Hero = () => {
             max-[768px]:justify-start
             max-[768px]:gap-14
             max-[768px]:pt-[180px]
-            max-[768px]:pb-24
+            max-[768px]:pb-14
             max-[768px]:text-center
           "
         >

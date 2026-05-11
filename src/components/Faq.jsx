@@ -1,3 +1,4 @@
+
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
@@ -29,24 +30,98 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      <div className="absolute right-4 top-0 h-full w-[1px] bg-gray-800" />
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* RIGHT BORDER */}
+      <div className="absolute right-4 top-0 hidden h-full w-[1px] bg-gray-800 md:block" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start min-h-[90vh]">
+      <div
+        className="
+          relative z-10 mx-auto max-w-7xl
+
+          px-6 py-10
+
+          max-[1024px]:px-8
+          max-[1024px]:py-12
+
+          max-[768px]:px-6
+          max-[768px]:py-10
+
+          max-[550px]:px-4
+          max-[550px]:py-8
+        "
+      >
+        <div
+          className="
+            grid min-h-[90vh] items-start
+
+            grid-cols-2 gap-16
+
+            max-[1200px]:gap-10
+
+            max-[996px]:grid-cols-2
+            max-[996px]:gap-6
+
+            max-[768px]:grid-cols-1
+            max-[768px]:gap-12
+          "
+        >
           {/* LEFT SECTION */}
-          <div>
-            <h3 className="text-gradient-red text-[32px] font-mokoto uppercase mb-4">
+          <div className="max-[768px]:text-center">
+            <h3
+              className="
+                text-gradient-red font-mokoto uppercase
+
+                mb-4 text-[32px]
+
+                max-[1024px]:text-[28px]
+
+                max-[768px]:text-[24px]
+
+                max-[550px]:mb-3
+                max-[550px]:text-[20px]
+              "
+            >
               FAQ
             </h3>
 
-            <h1 className="text-[55px] leading-[82px] tracking-[-2px] font-montserrat mb-12 uppercase">
+            <h1
+              className="
+                font-montserrat uppercase tracking-[-2px]
+
+                mb-12 text-[55px] leading-[82px]
+
+                max-[1200px]:text-[48px]
+                max-[1200px]:leading-[70px]
+
+                max-[1024px]:text-[42px]
+                max-[1024px]:leading-[60px]
+
+                max-[996px]:text-[34px]
+                max-[996px]:leading-[48px]
+
+                max-[768px]:mb-10
+                max-[768px]:text-[36px]
+                max-[768px]:leading-[52px]
+
+                max-[550px]:mb-8
+                max-[550px]:text-[28px]
+                max-[550px]:leading-[40px]
+              "
+            >
               Frequently Asked
               <br />
               Questions
             </h1>
 
-            <div className="flex flex-col gap-6">
+            <div
+              className="
+                flex flex-col gap-6
+
+                max-[768px]:gap-5
+
+                max-[550px]:gap-4
+              "
+            >
               {faqData.map((faq, index) => {
                 const isOpen = activeIndex === index;
 
@@ -55,20 +130,71 @@ const FAQSection = () => {
                     key={index}
                     layout
                     transition={{ duration: 0.4 }}
-                    className="bg-[#0e0e0e] rounded-[24px] border border-[#141414] overflow-hidden"
+                    className="
+                      overflow-hidden
+                      rounded-[24px]
+                      border border-[#141414]
+                      bg-[#0e0e0e]
+                    "
                   >
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full px-8 py-7 flex items-center justify-between text-left"
+                      className="
+                        flex w-full items-center justify-between
+                        text-left
+
+                        px-8 py-7
+
+                        max-[996px]:px-6
+                        max-[996px]:py-6
+
+                        max-[768px]:px-5
+                        max-[768px]:py-5
+
+                        max-[550px]:px-4
+                        max-[550px]:py-4
+                      "
                     >
-                      <span className="text-[18px] text-gray-200 font-montserrat">
+                      <span
+                        className="
+                          font-montserrat text-gray-200
+
+                          text-[18px]
+
+                          max-[1024px]:text-[16px]
+
+                          max-[996px]:text-[14px]
+
+                          max-[768px]:text-[15px]
+
+                          max-[550px]:text-[13px]
+                        "
+                      >
                         {faq.question}
                       </span>
 
                       {isOpen ? (
-                        <ChevronUp className="w-5 h-5 text-white" />
+                        <ChevronUp
+                          className="
+                            text-white
+
+                            h-5 w-5
+
+                            max-[550px]:h-4
+                            max-[550px]:w-4
+                          "
+                        />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-white" />
+                        <ChevronDown
+                          className="
+                            text-white
+
+                            h-5 w-5
+
+                            max-[550px]:h-4
+                            max-[550px]:w-4
+                          "
+                        />
                       )}
                     </button>
 
@@ -80,7 +206,28 @@ const FAQSection = () => {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.35 }}
                         >
-                          <div className="px-8 pb-8 text-gray-400 text-[14px] leading-8 font-montserrat max-w-[520px]">
+                          <div
+                            className="
+                              max-w-[520px]
+                              font-montserrat text-gray-400
+
+                              px-8 pb-8
+                              text-[14px] leading-8
+
+                              max-[996px]:px-6
+                              max-[996px]:pb-6
+                              max-[996px]:text-[13px]
+                              max-[996px]:leading-7
+
+                              max-[768px]:px-5
+                              max-[768px]:text-center
+
+                              max-[550px]:px-4
+                              max-[550px]:pb-4
+                              max-[550px]:text-[12px]
+                              max-[550px]:leading-6
+                            "
+                          >
                             {faq.answer}
                           </div>
                         </motion.div>
@@ -93,17 +240,66 @@ const FAQSection = () => {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="pt-12 relative">
-            <p className="text-gray-300 text-[15px] leading-8 max-w-[520px] font-montserrat mb-10">
+          <div
+            className="
+              relative pt-12
+
+              max-[996px]:pt-6
+
+              max-[768px]:pt-0
+              max-[768px]:flex
+              max-[768px]:flex-col
+              max-[768px]:items-center
+              max-[768px]:text-center
+            "
+          >
+            <p
+              className="
+                max-w-[520px]
+                font-montserrat text-gray-300
+
+                mb-10 text-[15px] leading-8
+
+                max-[996px]:text-[13px]
+                max-[996px]:leading-6
+
+                max-[768px]:mb-8
+                max-[768px]:max-w-full
+                max-[768px]:text-center
+
+                max-[550px]:text-[12px]
+                max-[550px]:leading-6
+              "
+            >
               Equinix enables secure crypto, Web3, and DeFi operations with
               high-performance infrastructure, low latency, connectivity,
               enterprise security, and global interconnection trusted by
               financial institutions worldwide.
             </p>
 
-            <div className="flex items-start gap-8">
-              {/* DOTS (NOW ONLY 3 & CONTROLLED BY FAQ INDEX) */}
-              <div className="flex flex-col gap-4 justify-center mt-52 mr-6">
+            <div
+              className="
+                flex items-start gap-8
+
+                max-[996px]:justify-center
+                max-[996px]:gap-4
+
+                max-[768px]:w-full
+                max-[768px]:flex-col
+                max-[768px]:items-center
+                max-[768px]:gap-5
+              "
+            >
+              {/* DOTS */}
+              <div
+                className="
+                  mt-52 mr-6 flex flex-col justify-center gap-4
+
+                  max-[1200px]:mt-44
+
+                  max-[996px]:hidden
+                "
+              >
                 {[0, 1, 2].map((dot) => {
                   const isActive = activeIndex === dot;
 
@@ -117,30 +313,84 @@ const FAQSection = () => {
                         duration: 0.8,
                         repeat: isActive ? Infinity : 0,
                       }}
-                      className={`w-3 h-3 rounded-full border transition-all duration-300 ${
-                        isActive
-                         ? "bg-gradient-to-b from-[#FF0404] via-[#FF7878] to-[#CF0000] border-[#FF0404] "
-                         : "bg-transparent border-red-500"
-                      }`}
+                      className={`
+                        rounded-full border transition-all duration-300
+
+                        w-3 h-3
+
+                        ${
+                          isActive
+                            ? "bg-gradient-to-b from-[#FF0404] via-[#FF7878] to-[#CF0000] border-[#FF0404]"
+                            : "bg-transparent border-red-500"
+                        }
+                      `}
                     />
                   );
                 })}
               </div>
 
-              {/* IMAGE (STATIC ONLY 1 IMAGE) */}
-              <div>
-                <div className="w-[320px] sm:w-[380px] mt-14 md:w-[450px] h-[300px] relative overflow-hidden rounded-[30px]">
+              {/* IMAGE + TEXT */}
+              <div
+                className="
+                  flex flex-col
+
+                  max-[768px]:items-center
+                  max-[768px]:w-full
+                "
+              >
+                <div
+                  className="
+                    relative overflow-hidden rounded-[30px]
+
+                    mt-14
+                    h-[300px] w-[450px]
+
+                    max-[1200px]:w-[380px]
+                    max-[1200px]:h-[270px]
+
+                    max-[996px]:mt-6
+                    max-[996px]:h-[220px]
+                    max-[996px]:w-full
+                    max-[996px]:max-w-[320px]
+
+                    max-[768px]:mt-0
+                    max-[768px]:h-[240px]
+                    max-[768px]:w-full
+                    max-[768px]:max-w-[320px]
+
+                    max-[550px]:h-[200px]
+                    max-[550px]:max-w-[240px]
+                  "
+                >
                   <motion.img
                     src={hand1}
                     alt="FAQ"
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7 }}
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
 
-                <p className=" text-gray-300 text-[14px] mt-6  leading-8 max-w-[450px] font-montserrat">
+                <p
+                  className="
+                    mt-6 max-w-[450px]
+                    font-montserrat text-gray-300
+
+                    text-[14px] leading-8
+
+                    max-[996px]:max-w-[320px]
+                    max-[996px]:text-[12px]
+                    max-[996px]:leading-6
+
+                    max-[768px]:mt-5
+                    max-[768px]:max-w-full
+                    max-[768px]:text-center
+
+                    max-[550px]:text-[12px]
+                    max-[550px]:leading-6
+                  "
+                >
                   Equinix powers crypto and Web3 with secure, high-performance
                   infrastructure, enabling blockchain deployment, DeFi
                   connectivity, and enterprise-grade interconnection.
