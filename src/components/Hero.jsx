@@ -65,7 +65,7 @@ const Hero = () => {
             scale-x-[1.2] whitespace-nowrap bg-[linear-gradient(90deg,#ff1d1d_0%,#ff4040_25%,#8b0000_50%,#ff4040_75%,#ff1d1d_100%)]
     bg-[length:250%_100%]
     animate-textSweep
-            bg-clip-text font-mokoto leading-none tracking-[0.04em]
+            bg-clip-text font-['mokoto'] leading-none tracking-[0.04em]
             text-transparent pointer-events-none select-none
             text-[42vw] sm:text-[20vw] md:text-[20vw]
             lg:text-[18vw] xl:text-[18vw]
