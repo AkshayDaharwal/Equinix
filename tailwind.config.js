@@ -16,10 +16,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mokoto: ["mokoto", "sans-serif"],
-        montserrat: ["montserrat", "sans-serif"],
-        oxanium: ["oxanium", "sans-serif"],
-        inter: ["inter", "sans-serif"],
+        mokoto: ["Mokoto", "sans-serif"],
+        // montserrat: ["Montserrat", "sans-serif"],
+        // oxanium: ["Oxanium", "sans-serif"],
+        // inter: ["Inter", "sans-serif"],
       },
 
       animation: {
