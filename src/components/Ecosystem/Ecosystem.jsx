@@ -5,14 +5,15 @@ import { ArrowRight } from "lucide-react";
 const ecosystemCards = [
   {
     title: "Network Rewards System",
-    
+
     points: [
       "Direct referral rewards",
       "Team growth incentives",
       "Level-based earning system",
     ],
     className: `
-      top-[130px] right-[30px]
+      top-[130px] right-[10px]
+2xl:right-[30px]
 
       max-[1200px]:top-[110px]
       max-[1200px]:right-[0px]
@@ -33,7 +34,8 @@ const ecosystemCards = [
       "Smart contract-based earnings",
     ],
     className: `
-      top-[210px] left-[-80px]
+      top-[210px] left-[0px]
+2xl:left-[-80px]
 
       max-[1200px]:top-[210px]
       max-[1200px]:left-[0px]
@@ -56,7 +58,8 @@ const ecosystemCards = [
       "AI-powered optimization",
     ],
     className: `
-      top-[300px] right-[30px]
+      top-[300px] right-[0px]
+2xl:right-[30px]
 
       max-[1200px]:top-[300px]
       max-[1200px]:right-[-10px]
@@ -75,7 +78,8 @@ const ecosystemCards = [
     description:
       "Seamless connectivity across exchanges, wallets, and blockchain networks.",
     className: `
-      bottom-[10px] left-[-80px]
+      bottom-[10px] left-[0px]
+2xl:left-[-80px]
 
       max-[1200px]:bottom-[10px]
       max-[1200px]:left-[0px]
@@ -110,7 +114,7 @@ const Ecosystem = () => {
       <div
         className="
           relative z-10 mx-auto grid w-full
-          items-center gap-46 md:grid-cols-2 px-20
+          items-center gap-16 xl:grid-cols-2 px-4 sm:px-8 md:px-10 lg:px-16
         "
       >
         {/* LEFT SIDE */}
@@ -118,7 +122,8 @@ const Ecosystem = () => {
           className="
             w-full max-w-[620px]
 
-            lg:ml-[-100px]
+           2xl:ml-[-100px]
+           xl:ml-[-40px]
 
             max-[1024px]:ml-0
             max-[768px]:max-w-full
@@ -187,6 +192,12 @@ const Ecosystem = () => {
                 max-[768px]:text-center
                 max-[768px]:text-[14px]
                 max-[768px]:leading-[24px]
+                 flex flex-col gap-5
+
+    sm:flex-row
+    sm:items-center
+
+    max-[768px]:items-center
               "
             >
               Earn rewards through referrals, staking, and liquidity, while
@@ -195,10 +206,16 @@ const Ecosystem = () => {
               worldwide.
             </p>
 
-            <button
+             <div className="flex items-center gap-4">
+   
+ <button
               className="
-    mt-14
-    relative top-16 -left-28
+   relative
+mt-6
+xl:mt-14
+
+max-[768px]:top-0
+max-[768px]:left-0
     max-[768px]:mt-0 
 
     flex h-[56px] min-w-[56px]
@@ -267,7 +284,13 @@ const Ecosystem = () => {
 </button> */}
             <button
               className="
-    relative right-20 -top-5
+   relative
+
+xl:right-20
+xl:-top-5
+
+max-[768px]:right-0
+max-[768px]:top-0
 
     flex h-[56px] min-w-[56px]
     items-center justify-center
@@ -323,6 +346,10 @@ const Ecosystem = () => {
                 </svg>
               </div>
             </button>
+
+  </div>
+
+           
           </div>
         </div>
 
@@ -333,25 +360,22 @@ const Ecosystem = () => {
 
     h-[560px]
 
-    translate-x-[80px]
-
-    max-[1400px]:translate-x-[40px]
+xl:translate-x-[20px]
+2xl:translate-x-[80px]
   "
         >
-       
-  <div className="absolute inset-0 z-0">
-  {/* slow glowing fire layers */}
-  <div className="absolute top-[20%] left-[10%] h-[300px] w-[300px] bg-red-600/20 blur-[120px] animate-pulse" />
-  
-  <div className="absolute top-[60%] right-[10%] h-[250px] w-[250px] bg-orange-500/20 blur-[140px] animate-pulse" />
-  
-  <div className="absolute bottom-[10%] left-[40%] h-[220px] w-[220px] bg-red-700/20 blur-[130px] animate-pulse" />
-</div>
+          <div className="absolute inset-0 z-0">
+            {/* slow glowing fire layers */}
+            <div className="absolute top-[20%] left-[10%] h-[300px] w-[300px] bg-red-600/20 blur-[120px] animate-pulse" />
+
+            <div className="absolute top-[60%] right-[10%] h-[250px] w-[250px] bg-orange-500/20 blur-[140px] animate-pulse" />
+
+            <div className="absolute bottom-[10%] left-[40%] h-[220px] w-[220px] bg-red-700/20 blur-[130px] animate-pulse" />
+          </div>
 
           {ecosystemCards.map((card, index) => (
             <div
               key={index}
-              
               style={{
                 willChange: "transform",
                 transform: "translateZ(0)",
@@ -363,7 +387,10 @@ const Ecosystem = () => {
   px-10 py-6 text-left
   backdrop-blur-sm
 
-  w-[350px] h-[170px]
+  w-[320px]
+2xl:w-[350px]
+
+h-[170px]
 
   ${card.className}
     shadow-[0_0_30px_rgba(255,0,0,0.15)]
@@ -395,44 +422,59 @@ const Ecosystem = () => {
         </div>
 
         {/* TABLET + MOBILE RESPONSIVE CARDS */}
-        <div
-          className="
-    hidden w-full
-
+       <div
+  className="
     xl:hidden
+    w-full
 
-    max-[768px]:flex
-    max-[768px]:flex-col
+    grid
+    grid-cols-1
+    md:grid-cols-2
 
-    min-[769px]:grid
-    min-[769px]:grid-cols-2
+    gap-6
+    md:gap-5
 
-    gap-5
-
-    max-[992px]:gap-4
+    mt-10
   "
-        >
+>
           {ecosystemCards.map((card, index) => (
             <div
-  key={index}
-  className={`
+              key={index}
+              className={`
 
-+ shadow-[0_0_40px_rgba(255,0,0,0.25)]
-+ relative overflow-hidden
-+ before:content-[''] before:absolute before:inset-0
-+ before:rounded-[80px]
-+ before:bg-[radial-gradient(circle_at_30%_20%,rgba(255,0,0,0.25),transparent_60%)]
-+ before:opacity-70
-     flex flex-col justify-start   rounded-[34px]   border border-red-600  
-      bg-black   backdrop-blur-sm    text-left    px-8 py-5    min-h-[150px]   
-       max-[1100px]:px-6   max-[1100px]:py-4   max-[1100px]:min-h-[135px]    max-[992px]:px-5  
-        max-[992px]:py-4   max-[992px]:min-h-[125px]    max-[768px]:text-center   max-[768px]:min-h-auto 
-          max-[768px]:px-6   max-[768px]:py-6
-    ${card.className}
+ relative overflow-hidden
+
+    z-10
+
+    w-full
+
+    flex flex-col justify-start
+
+    rounded-[34px]
+    border border-red-600
+    bg-black
+    backdrop-blur-sm
+
+    px-6 py-6
+
+    min-h-[180px]
+
+    text-center md:text-left
+
+    shadow-[0_0_40px_rgba(255,0,0,0.18)]
+
+    before:content-['']
+    before:absolute
+    before:inset-0
+    before:rounded-[34px]
+    before:bg-[radial-gradient(circle_at_30%_20%,rgba(255,0,0,0.18),transparent_60%)]
+    before:opacity-70
+    
   `}
->
+            >
               <h3
                 className="
+                relative z-10
   mb-3 font-['Montserrat']
   text-[22px] leading-[1.2] text-white
 
@@ -448,7 +490,7 @@ const Ecosystem = () => {
                 <ul
                   className="
             space-y-1.5 text-gray-400
-
+                relative z-10
             text-[15px] leading-6
 
             max-[992px]:text-[12px]
